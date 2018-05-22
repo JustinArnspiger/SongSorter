@@ -3,7 +3,7 @@ This program is designed to make it easy for people to sort & rank their favorit
 
 ## Planned features
 * Efficient Sorting
-  * The sorting method will try to reduce the number of comparisons as much as possible. It will attempt to do this by using a self-balancing binary tree to store the results of each comparison.
+  * The program will try to reduce the number of comparisons that the user has to make as much as possible. It will attempt to do this by using a self-balancing binary tree to store the results of each comparison.
 * Media Player Functionality
   * When the user is prompted to compare songs, they will have the option of listening to them so that they can make a more accurate decision about which one they prefer.
 * Categorization of Results
@@ -26,7 +26,7 @@ This program is designed to make it easy for people to sort & rank their favorit
 
 ## Plan for Implementation
 ### Phase 1: Basic Functionality
-- [ ] GUI Layout
+- [ ] Basic GUI Layout
 - [ ] Song Importing
 - [ ] Media Player
 - [ ] Song Sorting
@@ -35,4 +35,4 @@ This program is designed to make it easy for people to sort & rank their favorit
 ### Phase 2: Additional Features
 - [ ] Additional Categories and Sorting Methods
 - [ ] Playlist Generation
-- [ ] GUI visual improvements
+- [ ] GUI improvements
