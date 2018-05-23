@@ -1,0 +1,15 @@
+include($QT_INSTALL_DOCS/global/compat.qdocconf)
+include($QT_INSTALL_DOCS/global/fileextensions.qdocconf)
+include($QT_INSTALL_DOCS/global/qt-html-templates-offline.qdocconf)
+
+project = SongSorter
+description = A program for sorting your favorite songs.
+
+outputdir   = ./doc/html
+headerdirs  = ./songHandling \
+			  ./UI
+sourcedirs  = . \
+			  ./songHandling \
+			  ./UI	
+exampledirs = ./examples
+imagedirs   = ./images

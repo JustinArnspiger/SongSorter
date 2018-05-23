@@ -1,10 +1,10 @@
-#include "welcomewindow.h"
+#include "UI/startupwindow.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    WelcomeWindow w;
+    StartupWindow w;
     w.show();
 
     return a.exec();

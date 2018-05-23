@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- song.cpp -->
+  <title>Song Class | SongSorter</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Song</td>        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Song Class</h1>
+<!-- $$$Song-brief -->
+<p>Represents a Song. <a href="#details">More...</a></p>
+<!-- @@@Song -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;Song&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="song-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="song.html#Song">Song</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="song.html#Song-1">Song</a></b>(QString <i>aFilePath</i>, QString <i>aArtistName</i>, QString <i>aAlbumName</i>, QString <i>aSongName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="song.html#dtor.Song">~Song</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="song.html#getAlbumName">getAlbumName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="song.html#getArtistName">getArtistName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="song.html#getFilePath">getFilePath</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="song.html#getRank">getRank</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="song.html#getSongName">getSongName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="song.html#setAlbumName">setAlbumName</a></b>(QString <i>aAlbumName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="song.html#setArtistName">setArtistName</a></b>(QString <i>aArtistName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="song.html#setFilePath">setFilePath</a></b>(QString <i>aFilePath</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="song.html#setRank">setRank</a></b>(int <i>aRank</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="song.html#setSongName">setSongName</a></b>(QString <i>aSongName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="song.html#operator-lt">operator&lt;</a></b>(const Song &amp;<i>aOtherSong</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="song.html#operator-lt-eq">operator&lt;=</a></b>(const Song &amp;<i>aOtherSong</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="song.html#operator-gt">operator&gt;</a></b>(const Song &amp;<i>aOtherSong</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="song.html#operator-gt-eq">operator&gt;=</a></b>(const Song &amp;<i>aOtherSong</i>) const</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Song *</td><td class="memItemRight bottomAlign"><b><a href="song.html#createSongFromFilePath">createSongFromFilePath</a></b>(QString <i>aFilePath</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$Song-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>Represents a Song.</p>
+<p>This class is a container that represents a Song according to its metadata (artist, album, etc.) as well as its overall rank and file path.</p>
+</div>
+<!-- @@@Song -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Song[overload1]$$$Song -->
+<h3 class="fn" id="Song"><a name="Song"></a>Song::<span class="name">Song</span>()</h3>
+<p>Default constructs an instance of Song.</p><!-- @@@Song -->
+<!-- $$$Song$$$SongQStringQStringQStringQString -->
+<h3 class="fn" id="Song-1"><a name="Song-1"></a>Song::<span class="name">Song</span>(<span class="type">QString</span> <i>aFilePath</i>, <span class="type">QString</span> <i>aArtistName</i>, <span class="type">QString</span> <i>aAlbumName</i>, <span class="type">QString</span> <i>aSongName</i>)</h3>
+<p>* *</p>
+<p>Default constructor for a song * <i>aFilePath</i> The file path to the song. Defaults to an empty string. * <i>aArtistName</i> The name of the artist who made the song. Defaults to an empty string. * <i>aAlbumName</i> The name of the album which the song belongs to. Defaults to an empty string. * <i>aSongName</i> The name of the song. Defaults to an empty string.</p>
+<!-- @@@Song -->
+<!-- $$$~Song[overload1]$$$~Song -->
+<h3 class="fn" id="dtor.Song"><a name="dtor.Song"></a>Song::<span class="name">~Song</span>()</h3>
+<p>The destructor for a song.</p>
+<!-- @@@~Song -->
+<!-- $$$createSongFromFilePath[overload1]$$$createSongFromFilePathQString -->
+<h3 class="fn" id="createSongFromFilePath"><a name="createSongFromFilePath"></a><code>[static] </code><span class="type"><a href="song.html#Song">Song</a></span> *Song::<span class="name">createSongFromFilePath</span>(<span class="type">QString</span> <i>aFilePath</i>)</h3>
+<p>Returns a new Song whose metadata is retrieved from the file path. <i>aFilePath</i> The given file path to the song.</p>
+<p>This function is for when a song's metadata is unable to be retrieved through the standard method of using QMediaPlayer. In order to try to approximate the metadata, this function will use parts of the file path with the assumption that if the file is something like example_song.mp3, then the song's name is Example Song.</p>
+<p>The function also tries to obtain the artist and album by assuming (if applicable) that the file path is formatted as ..&#x2e;/artistName/albumName/song.&lt;file_extension&gt;.</p>
+<p><b>Note: </b>This function will allocate a new song, so the song that is created must be deleted later.</p><!-- @@@createSongFromFilePath -->
+<!-- $$$getAlbumName[overload1]$$$getAlbumName -->
+<h3 class="fn" id="getAlbumName"><a name="getAlbumName"></a><span class="type">QString</span> Song::<span class="name">getAlbumName</span>() const</h3>
+<p>Gets the name of the album that the song belongs to. Returns a string representing the name of the album that the song belongs to.</p>
+<!-- @@@getAlbumName -->
+<!-- $$$getArtistName[overload1]$$$getArtistName -->
+<h3 class="fn" id="getArtistName"><a name="getArtistName"></a><span class="type">QString</span> Song::<span class="name">getArtistName</span>() const</h3>
+<p>Gets the name of the artist that wrote the song. Returns a string representing the name of the artist that wrote the song.</p>
+<!-- @@@getArtistName -->
+<!-- $$$getFilePath[overload1]$$$getFilePath -->
+<h3 class="fn" id="getFilePath"><a name="getFilePath"></a><span class="type">QString</span> Song::<span class="name">getFilePath</span>() const</h3>
+<p>Gets the path to the song file. Returns a string representing the file path of the song.</p>
+<!-- @@@getFilePath -->
+<!-- $$$getRank[overload1]$$$getRank -->
+<h3 class="fn" id="getRank"><a name="getRank"></a><span class="type">int</span> Song::<span class="name">getRank</span>() const</h3>
+<p>Gets the ranking of the song. Returns an integer representing the ranking of the song in the sorting.</p>
+<!-- @@@getRank -->
+<!-- $$$getSongName[overload1]$$$getSongName -->
+<h3 class="fn" id="getSongName"><a name="getSongName"></a><span class="type">QString</span> Song::<span class="name">getSongName</span>() const</h3>
+<p>Gets the name of the song. Returns a string representing the name of song.</p>
+<!-- @@@getSongName -->
+<!-- $$$setAlbumName[overload1]$$$setAlbumNameQString -->
+<h3 class="fn" id="setAlbumName"><a name="setAlbumName"></a><span class="type">void</span> Song::<span class="name">setAlbumName</span>(<span class="type">QString</span> <i>aAlbumName</i>)</h3>
+<p>Sets the name of the album that the song belongs to. <i>aAlbumName</i> The new name of the album that the song belongs to.</p>
+<!-- @@@setAlbumName -->
+<!-- $$$setArtistName[overload1]$$$setArtistNameQString -->
+<h3 class="fn" id="setArtistName"><a name="setArtistName"></a><span class="type">void</span> Song::<span class="name">setArtistName</span>(<span class="type">QString</span> <i>aArtistName</i>)</h3>
+<p>Sets the name of the artist that wrote the song. <i>aArtistName</i> The new name of the artist that wrote the song.</p>
+<!-- @@@setArtistName -->
+<!-- $$$setFilePath[overload1]$$$setFilePathQString -->
+<h3 class="fn" id="setFilePath"><a name="setFilePath"></a><span class="type">void</span> Song::<span class="name">setFilePath</span>(<span class="type">QString</span> <i>aFilePath</i>)</h3>
+<p>Sets the path to the song file. <i>aFilePath</i> The new file path to the song.</p>
+<!-- @@@setFilePath -->
+<!-- $$$setRank[overload1]$$$setRankint -->
+<h3 class="fn" id="setRank"><a name="setRank"></a><span class="type">void</span> Song::<span class="name">setRank</span>(<span class="type">int</span> <i>aRank</i>)</h3>
+<p>Sets the ranking of the song in the sorting. <i>aRank</i> The new ranking of the song.</p>
+<!-- @@@setRank -->
+<!-- $$$setSongName[overload1]$$$setSongNameQString -->
+<h3 class="fn" id="setSongName"><a name="setSongName"></a><span class="type">void</span> Song::<span class="name">setSongName</span>(<span class="type">QString</span> <i>aSongName</i>)</h3>
+<p>Sets the name of the song. <i>aSongName</i> The new name of the song.</p>
+<!-- @@@setSongName -->
+<!-- $$$operator<[overload1]$$$operator<constSong& -->
+<h3 class="fn" id="operator-lt"><a name="operator-lt"></a><span class="type">bool</span> Song::<span class="name">operator&lt;</span>(const <span class="type"><a href="song.html#Song">Song</a></span> &amp;<i>aOtherSong</i>) const</h3>
+<p>Overloaded operator that compares this song to another song. <i>aOtherSong</i> The song to compare to this one.</p>
+<p>Returns <code>true</code> if this song has a lesser rank than aOtherSong.</p>
+<!-- @@@operator< -->
+<!-- $$$operator<=[overload1]$$$operator<=constSong& -->
+<h3 class="fn" id="operator-lt-eq"><a name="operator-lt-eq"></a><span class="type">bool</span> Song::<span class="name">operator&lt;=</span>(const <span class="type"><a href="song.html#Song">Song</a></span> &amp;<i>aOtherSong</i>) const</h3>
+<p>Overloaded operator that compares this song to another song. <i>aOtherSong</i> The song to compare to this one.</p>
+<p>Returns <code>true</code> if this song has a lesser than or equal rank to aOtherSong.</p>
+<!-- @@@operator<= -->
+<!-- $$$operator>[overload1]$$$operator>constSong& -->
+<h3 class="fn" id="operator-gt"><a name="operator-gt"></a><span class="type">bool</span> Song::<span class="name">operator&gt;</span>(const <span class="type"><a href="song.html#Song">Song</a></span> &amp;<i>aOtherSong</i>) const</h3>
+<p>Overloaded operator that compares this song to another song. <i>aOtherSong</i> The song to compare to this one.</p>
+<p>Returns <code>true</code> if this song has a greater rank than aOtherSong.</p>
+<!-- @@@operator> -->
+<!-- $$$operator>=[overload1]$$$operator>=constSong& -->
+<h3 class="fn" id="operator-gt-eq"><a name="operator-gt-eq"></a><span class="type">bool</span> Song::<span class="name">operator&gt;=</span>(const <span class="type"><a href="song.html#Song">Song</a></span> &amp;<i>aOtherSong</i>) const</h3>
+<p>Overloaded operator that compares this song to another song. <i>aOtherSong</i> The song to compare to this one.</p>
+<p>Returns <code>true</code> if this song has a greater than or equal rank to aOtherSong.</p>
+<!-- @@@operator>= -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2017 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>
