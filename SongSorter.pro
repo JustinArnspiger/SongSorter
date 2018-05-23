@@ -24,16 +24,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        welcomewindow.cpp \
-    song.cpp \
-    sortingwindow.cpp
+    main.cpp \
+    songHandling/song.cpp \
+    UI/startupwindow.cpp \
+    UI/comparisonwindow.cpp
 
 HEADERS += \
-        welcomewindow.h \
-    song.h \
-    sortingwindow.h
+    songHandling/song.h \
+    UI/startupwindow.h \
+    UI/comparisonwindow.h
 
 FORMS += \
-        welcomewindow.ui \
-    sortingwindow.ui
+    UI/comparisonwindow.ui \
+    UI/startupwindow.ui
+

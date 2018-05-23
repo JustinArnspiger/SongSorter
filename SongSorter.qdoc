@@ -1,0 +1,91 @@
+/*!
+ \page contents.html
+ \contentspage {Contents}{Contents}
+
+ \startpage {Contents}
+ \nextpage {Getting Started}
+ \indexpage {Index} 
+
+ \title Contents
+
+ SongSorter is a program that allows you to sort your favorite songs individually by artist, album, year, genre. More description will be added later.
+ The documentation of the code is \l {Code Documentation}{Here}.
+ 
+ \list
+   \li \l {Getting Started}
+   \li \l {Installation}
+   \li \l {Usage Guide}
+ \endlist
+*/
+ 
+/*!
+ \page gettingstarted.html
+ \previouspage {Contents}
+ \nextpage {Installation}
+ 
+ \startpage {Contents}
+ \indexpage {Index}
+
+ \title Getting Started
+
+ General information will be put here.
+*/
+
+/*!
+ \page installation.html
+ \previouspage {Getting Started}
+ \nextpage {Usage Guide}
+ 
+ \startpage {Contents}
+ \indexpage {Index}
+
+ \title Installation
+ Information about how to install the program will be put here.
+*/
+ 
+ /*! 
+  \page usageguide.html
+  \previouspage {Installation}
+  
+  \startpage {Contents}
+  \indexpage {Index}
+  
+  \title Usage Guide
+ 
+  Guide on how to use the program will go here.
+ */
+  
+/*!
+ \page index.html
+ \contentspage {Contents}
+ 
+ \title Index
+ \list
+   \li \l {Contents}
+   \li \l {Getting Started}
+   \li \l {Installation}
+   \li \l {Usage Guide}
+   \li \l {Code Documentation}
+ \endlist
+*/
+ 
+/*!
+ \page codedocumentation.html
+ \contentspage {Contents}
+ \indexpage {Index}
+ 
+ \title Code Documentation
+ Below is the documentation of the code for the program separated into its different components.
+ \table
+ \header
+   \li Component
+   \li Brief Description
+ \row
+   \li \l {Song Handling}
+   \li Classes that handle songs and their sorting.
+ \row
+   \li \l {UI}
+   \li Classes that handle the user interface.
+ \endtable
+*/
+ 

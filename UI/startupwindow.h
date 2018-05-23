@@ -1,33 +1,33 @@
-#ifndef WELCOMEWINDOW_H
-#define WELCOMEWINDOW_H
+#ifndef STARTUPWINDOW_H
+#define STARTUPWINDOW_H
 
 #include <QFileDialog>
 #include <QMainWindow>
 #include <QMediaPlayer>
 #include <QString>
 #include <QVector>
-#include "song.h"
+#include "songHandling/song.h"
 
 namespace Ui {
-    class WelcomeWindow;
+    class StartupWindow;
 }
 
-class WelcomeWindow : public QMainWindow
+class StartupWindow : public QMainWindow
 {
         Q_OBJECT
 
     public:
-        explicit WelcomeWindow(QWidget *parent = 0);
-        ~WelcomeWindow();
+        explicit StartupWindow(QWidget *parent = 0);
+        ~StartupWindow();
 
     private slots:
         void on_mMetadataRetrievalMediaPlayer_mediaStatusChanged(QMediaPlayer::MediaStatus aStatus);
         void on_addFolderButton_released();
 
     private:
-        Ui::WelcomeWindow *ui;
+        Ui::StartupWindow *ui;
         QMediaPlayer* mMetadataRetrievalMediaPlayer = nullptr;
         QString mCurrentPath;
 };
 
-#endif // WELCOMEWINDOW_H
+#endif // STARTUPWINDOW_H

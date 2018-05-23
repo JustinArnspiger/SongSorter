@@ -31,11 +31,10 @@ class Song : public QObject
         bool operator <=(const Song &aOtherSong) const;
         bool operator >=(const Song &aOtherSong) const;
 
-
         static Song* createSongFromFilePath(QString aFilePath);
 
     private:
-        int mRank;
+        int mRank; // The ranking of the song in the sorting.
         QString mAlbumName;
         QString mArtistName;
         QString mFilePath;

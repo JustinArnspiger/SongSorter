@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>WelcomeWindow</class>
- <widget class="QMainWindow" name="WelcomeWindow">
+ <class>StartupWindow</class>
+ <widget class="QMainWindow" name="StartupWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>WelcomeWindow</string>
+   <string>SongSorter</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="welcomeText">
