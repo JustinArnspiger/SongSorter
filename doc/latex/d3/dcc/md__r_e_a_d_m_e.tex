@@ -1,0 +1,67 @@
+This program is designed to make it easy for people to sort \& rank their favorite songs, artists, and albums. It will accomplish this by first getting a list of songs from the user and then presenting to the user a pair of songs and having them choose which one of the two they like more. The program will then continue to present pairs of songs to the user until each song is sorted.
+
+\subsection*{Built with}
+
+\href{http://taglib.org/}{\tt Taglib 1.\+11.\+1}
+
+\subsection*{Planned features}
+
+
+\begin{DoxyItemize}
+\item Efficient Sorting
+\begin{DoxyItemize}
+\item The program will try to reduce the number of comparisons that the user has to make as much as possible. It will attempt to do this by using a self-\/balancing binary tree to store the results of each comparison.
+\end{DoxyItemize}
+\item Media Player Functionality
+\begin{DoxyItemize}
+\item When the user is prompted to compare songs, they will have the option of listening to them so that they can make a more accurate decision about which one they prefer.
+\end{DoxyItemize}
+\item Categorization of Results
+\begin{DoxyItemize}
+\item The user will have the option of having the results grouped into categories such that they will be able to see how each group of songs compares to one another. There will also be a variety of different ways in which the groups can be sorted.
+\item Planned Categories\+:
+\begin{DoxyItemize}
+\item Album
+\item Artist
+\item Genre
+\item Year
+\item Decade
+\end{DoxyItemize}
+\item Planned Sorting Methods\+:
+\begin{DoxyItemize}
+\item Average Rank
+\item Median Rank
+\item Highest/\+Lowest Rank of Individual \mbox{\hyperlink{class_song}{Song}}
+\item All of the above with the ability to only take into account the highest-\/ranked or lowest-\/ranked half of songs in the group.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item Ability to Export Results
+\begin{DoxyItemize}
+\item The user will be able to export the results of the sorting to a csv file. This option will be available for both grouped and ungrouped results.
+\end{DoxyItemize}
+\item Playlist Generation
+\begin{DoxyItemize}
+\item The user will also be able to generate playlists using the results of the sorting.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection*{Plan for Implementation}
+
+\subsubsection*{Phase 1\+: Basic Functionality}
+
+
+\begin{DoxyItemize}
+\item \mbox{[} \mbox{]} Basic G\+UI Layout
+\item \mbox{[}X\mbox{]} \mbox{\hyperlink{class_song}{Song}} Importing
+\item \mbox{[} \mbox{]} Media Player
+\item \mbox{[} \mbox{]} \mbox{\hyperlink{class_song}{Song}} Sorting
+\item \mbox{[} \mbox{]} Output File Generation
+\item \mbox{[} \mbox{]} Installer Creation \subsubsection*{Phase 2\+: Additional Features}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item \mbox{[} \mbox{]} Additional Categories and Sorting Methods
+\item \mbox{[} \mbox{]} Playlist Generation
+\item \mbox{[} \mbox{]} G\+UI improvements 
+\end{DoxyItemize}

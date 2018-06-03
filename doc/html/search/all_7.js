@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['main',['main',['../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp',['main.cpp',['../df/d0a/main_8cpp.html',1,'']]],
+  ['malbumname',['mAlbumName',['../da/dc3/class_song.html#aadf3ea14887a9c5a36a1fe419d7d6222',1,'Song']]],
+  ['martistname',['mArtistName',['../da/dc3/class_song.html#a53eb13c6325e01434ee370ba2d9af292',1,'Song']]],
+  ['mchangesaccepted',['mChangesAccepted',['../da/dcb/class_song_list_viewer_window.html#aa8fcb59a0ed81ec14c6ac611e1812c08',1,'SongListViewerWindow']]],
+  ['mcomparisonwindow',['mComparisonWindow',['../dd/d7e/class_startup_window.html#a674395b4edbe76568be4f0f4c7577ac1',1,'StartupWindow']]],
+  ['meditsoccurred',['mEditsOccurred',['../da/dcb/class_song_list_viewer_window.html#a939acaa75e8260232852266a5891fb5f',1,'SongListViewerWindow']]],
+  ['mfilepath',['mFilePath',['../da/dc3/class_song.html#af6852312a9369340908b7726d97979a6',1,'Song']]],
+  ['mnumsongsaftersave',['mNumSongsAfterSave',['../da/dcb/class_song_list_viewer_window.html#a92cc7fd927ce7dc144f0febb0fdfa434',1,'SongListViewerWindow']]],
+  ['mnumsongslabel',['mNumSongsLabel',['../dd/d7e/class_startup_window.html#a59337faf9ce34917d0e056414601c571',1,'StartupWindow']]],
+  ['mrank',['mRank',['../da/dc3/class_song.html#a18b47d2545fc5e7795cad143092c97e7',1,'Song']]],
+  ['msconfirmimportedsongslabel',['msConfirmImportedSongsLabel',['../da/dcb/class_song_list_viewer_window.html#afd987f0161763fac7d03b0ccff54ef39',1,'SongListViewerWindow']]],
+  ['mseditmainsonglistlabel',['msEditMainSongListLabel',['../da/dcb/class_song_list_viewer_window.html#aced76ec4265d0194f9b793133e661406',1,'SongListViewerWindow']]],
+  ['msongedits',['mSongEdits',['../da/dcb/class_song_list_viewer_window.html#aa38d8a91dc7ebe0925602b3846c34fdc',1,'SongListViewerWindow']]],
+  ['msonglist',['mSongList',['../da/dcb/class_song_list_viewer_window.html#a02558cb095f356a1288e5663bc2e1955',1,'SongListViewerWindow']]],
+  ['msonglistmode',['mSongListMode',['../da/dcb/class_song_list_viewer_window.html#a1c242af144718150837feff19386dc73',1,'SongListViewerWindow']]],
+  ['msonglistviewerwindow',['mSongListViewerWindow',['../dd/d7e/class_startup_window.html#a26e72433e3cf3d35ae49d77d91f5cc38',1,'StartupWindow']]],
+  ['msongname',['mSongName',['../da/dc3/class_song.html#af7fae22fdde85f62397c5a3618e8e573',1,'Song']]],
+  ['msongs',['mSongs',['../dd/d7e/class_startup_window.html#ae57241505d74639131cb0ece2cfc922b',1,'StartupWindow']]],
+  ['msongsfromselectedfolder',['mSongsFromSelectedFolder',['../dd/d7e/class_startup_window.html#af419f4809f6fae0b370f1d9112dae9b4',1,'StartupWindow']]],
+  ['mssupportedfileextensions',['msSupportedFileExtensions',['../dd/d7e/class_startup_window.html#a7caf611224e692a7116cba45f1aa71a3',1,'StartupWindow']]],
+  ['mtracknumber',['mTrackNumber',['../da/dc3/class_song.html#a45f2f019180a08117bc1992f16fdb5f7',1,'Song']]],
+  ['munsavedchanges',['mUnsavedChanges',['../da/dcb/class_song_list_viewer_window.html#a150efbd08beb368c4acc65621d03d35d',1,'SongListViewerWindow']]]
+];

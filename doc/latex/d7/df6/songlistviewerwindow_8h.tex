@@ -1,0 +1,95 @@
+\hypertarget{songlistviewerwindow_8h}{}\section{U\+I/songlistviewerwindow.h File Reference}
+\label{songlistviewerwindow_8h}\index{U\+I/songlistviewerwindow.\+h@{U\+I/songlistviewerwindow.\+h}}
+{\ttfamily \#include $<$Q\+Main\+Window$>$}\newline
+{\ttfamily \#include $<$Q\+Check\+Box$>$}\newline
+{\ttfamily \#include $<$Q\+Close\+Event$>$}\newline
+{\ttfamily \#include $<$Q\+Debug$>$}\newline
+{\ttfamily \#include $<$Q\+Dialog$>$}\newline
+{\ttfamily \#include $<$Q\+Dir$>$}\newline
+{\ttfamily \#include $<$Q\+H\+Box\+Layout$>$}\newline
+{\ttfamily \#include $<$Q\+Map$>$}\newline
+{\ttfamily \#include $<$Q\+Message\+Box$>$}\newline
+{\ttfamily \#include $<$Q\+Push\+Button$>$}\newline
+{\ttfamily \#include $<$Q\+Spin\+Box$>$}\newline
+{\ttfamily \#include $<$Q\+String$>$}\newline
+{\ttfamily \#include \char`\"{}song\+Handling/song.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}
+\begin{DoxyCompactList}\small\item\em Allows the user to choose which songs to import from a folder.
+
+This class implements event handling for a window that displays lists of \mbox{\hyperlink{class_song}{songs}}. The window has different \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{modes}} that it can be run in, and these modes dictate the actions that are available for the user in the window. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_song_list_viewer_window_1_1song__edit}{Song\+List\+Viewer\+Window\+::song\+\_\+edit}}
+\begin{DoxyCompactList}\small\item\em Keeps tracks of edits that occur to a song in the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_ui}{Ui}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{songlistviewerwindow_8h_a43772c536452cd8ed0af845b585487bf}{C\+H\+E\+C\+K\+B\+O\+X\+\_\+\+O\+R\+\_\+\+R\+A\+N\+K\+\_\+\+C\+O\+L\+U\+MN}}~0
+\item 
+\#define \mbox{\hyperlink{songlistviewerwindow_8h_a4df933f03e6d62e433d019b597e25109}{A\+R\+T\+I\+S\+T\+\_\+\+C\+O\+L\+U\+MN}}~1
+\item 
+\#define \mbox{\hyperlink{songlistviewerwindow_8h_a36e2a49e6de166851f1039129ea2a9fb}{A\+L\+B\+U\+M\+\_\+\+C\+O\+L\+U\+MN}}~2
+\item 
+\#define \mbox{\hyperlink{songlistviewerwindow_8h_ab082e8ecd5faa2301f1d67d8df3b0eee}{T\+R\+A\+C\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+MN}}~3
+\item 
+\#define \mbox{\hyperlink{songlistviewerwindow_8h_a7376276fcf9a1862cfadc5ab562d3672}{S\+O\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN}}~4
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{songlistviewerwindow_8h_a36e2a49e6de166851f1039129ea2a9fb}\label{songlistviewerwindow_8h_a36e2a49e6de166851f1039129ea2a9fb}} 
+\index{songlistviewerwindow.\+h@{songlistviewerwindow.\+h}!A\+L\+B\+U\+M\+\_\+\+C\+O\+L\+U\+MN@{A\+L\+B\+U\+M\+\_\+\+C\+O\+L\+U\+MN}}
+\index{A\+L\+B\+U\+M\+\_\+\+C\+O\+L\+U\+MN@{A\+L\+B\+U\+M\+\_\+\+C\+O\+L\+U\+MN}!songlistviewerwindow.\+h@{songlistviewerwindow.\+h}}
+\subsubsection{\texorpdfstring{A\+L\+B\+U\+M\+\_\+\+C\+O\+L\+U\+MN}{ALBUM\_COLUMN}}
+{\footnotesize\ttfamily \#define A\+L\+B\+U\+M\+\_\+\+C\+O\+L\+U\+MN~2}
+
+
+
+Definition at line 21 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{songlistviewerwindow_8h_a4df933f03e6d62e433d019b597e25109}\label{songlistviewerwindow_8h_a4df933f03e6d62e433d019b597e25109}} 
+\index{songlistviewerwindow.\+h@{songlistviewerwindow.\+h}!A\+R\+T\+I\+S\+T\+\_\+\+C\+O\+L\+U\+MN@{A\+R\+T\+I\+S\+T\+\_\+\+C\+O\+L\+U\+MN}}
+\index{A\+R\+T\+I\+S\+T\+\_\+\+C\+O\+L\+U\+MN@{A\+R\+T\+I\+S\+T\+\_\+\+C\+O\+L\+U\+MN}!songlistviewerwindow.\+h@{songlistviewerwindow.\+h}}
+\subsubsection{\texorpdfstring{A\+R\+T\+I\+S\+T\+\_\+\+C\+O\+L\+U\+MN}{ARTIST\_COLUMN}}
+{\footnotesize\ttfamily \#define A\+R\+T\+I\+S\+T\+\_\+\+C\+O\+L\+U\+MN~1}
+
+
+
+Definition at line 20 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{songlistviewerwindow_8h_a43772c536452cd8ed0af845b585487bf}\label{songlistviewerwindow_8h_a43772c536452cd8ed0af845b585487bf}} 
+\index{songlistviewerwindow.\+h@{songlistviewerwindow.\+h}!C\+H\+E\+C\+K\+B\+O\+X\+\_\+\+O\+R\+\_\+\+R\+A\+N\+K\+\_\+\+C\+O\+L\+U\+MN@{C\+H\+E\+C\+K\+B\+O\+X\+\_\+\+O\+R\+\_\+\+R\+A\+N\+K\+\_\+\+C\+O\+L\+U\+MN}}
+\index{C\+H\+E\+C\+K\+B\+O\+X\+\_\+\+O\+R\+\_\+\+R\+A\+N\+K\+\_\+\+C\+O\+L\+U\+MN@{C\+H\+E\+C\+K\+B\+O\+X\+\_\+\+O\+R\+\_\+\+R\+A\+N\+K\+\_\+\+C\+O\+L\+U\+MN}!songlistviewerwindow.\+h@{songlistviewerwindow.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+E\+C\+K\+B\+O\+X\+\_\+\+O\+R\+\_\+\+R\+A\+N\+K\+\_\+\+C\+O\+L\+U\+MN}{CHECKBOX\_OR\_RANK\_COLUMN}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+B\+O\+X\+\_\+\+O\+R\+\_\+\+R\+A\+N\+K\+\_\+\+C\+O\+L\+U\+MN~0}
+
+
+
+Definition at line 19 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{songlistviewerwindow_8h_a7376276fcf9a1862cfadc5ab562d3672}\label{songlistviewerwindow_8h_a7376276fcf9a1862cfadc5ab562d3672}} 
+\index{songlistviewerwindow.\+h@{songlistviewerwindow.\+h}!S\+O\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN@{S\+O\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN}}
+\index{S\+O\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN@{S\+O\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN}!songlistviewerwindow.\+h@{songlistviewerwindow.\+h}}
+\subsubsection{\texorpdfstring{S\+O\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN}{SONG\_NAME\_COLUMN}}
+{\footnotesize\ttfamily \#define S\+O\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN~4}
+
+
+
+Definition at line 23 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{songlistviewerwindow_8h_ab082e8ecd5faa2301f1d67d8df3b0eee}\label{songlistviewerwindow_8h_ab082e8ecd5faa2301f1d67d8df3b0eee}} 
+\index{songlistviewerwindow.\+h@{songlistviewerwindow.\+h}!T\+R\+A\+C\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+MN@{T\+R\+A\+C\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+MN}}
+\index{T\+R\+A\+C\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+MN@{T\+R\+A\+C\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+MN}!songlistviewerwindow.\+h@{songlistviewerwindow.\+h}}
+\subsubsection{\texorpdfstring{T\+R\+A\+C\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+MN}{TRACK\_NUMBER\_COLUMN}}
+{\footnotesize\ttfamily \#define T\+R\+A\+C\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+C\+O\+L\+U\+MN~3}
+
+
+
+Definition at line 22 of file songlistviewerwindow.\+h.
+

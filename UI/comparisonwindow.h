@@ -16,7 +16,7 @@ class ComparisonWindow : public QMainWindow
         ~ComparisonWindow();
 
     private:
-        Ui::ComparisonWindow *ui;
+        Ui::ComparisonWindow *ui; //!< The ui for the ComparisonWindow.
 };
 
 #endif // SORTINGWINDOW_H

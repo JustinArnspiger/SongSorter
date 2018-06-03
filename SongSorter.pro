@@ -7,6 +7,7 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia
+CONFIG += c++14
 
 TARGET = SongSorter
 TEMPLATE = app
@@ -27,14 +28,25 @@ SOURCES += \
     main.cpp \
     songHandling/song.cpp \
     UI/startupwindow.cpp \
-    UI/comparisonwindow.cpp
+    UI/comparisonwindow.cpp \
+    UI/songlistviewerwindow.cpp
 
 HEADERS += \
     songHandling/song.h \
     UI/startupwindow.h \
-    UI/comparisonwindow.h
+    UI/comparisonwindow.h \
+    UI/songlistviewerwindow.h
+
 
 FORMS += \
     UI/comparisonwindow.ui \
-    UI/startupwindow.ui
+    UI/startupwindow.ui \
+    UI/songlistviewerwindow.ui
 
+win32: LIBS += -L$$PWD/taglib/lib/ -llibtag.dll
+
+INCLUDEPATH += $$PWD/taglib/include
+DEPENDPATH += $$PWD/taglib/include
+
+DISTFILES += \
+    doc/documentation.dox

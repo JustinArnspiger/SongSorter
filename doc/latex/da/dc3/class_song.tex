@@ -1,0 +1,616 @@
+\hypertarget{class_song}{}\section{Song Class Reference}
+\label{class_song}\index{Song@{Song}}
+
+
+Represents a \mbox{\hyperlink{class_song}{Song}}.  
+
+
+
+
+{\ttfamily \#include $<$song.\+h$>$}
+
+Inheritance diagram for Song\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/dc3/class_song}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_song_a996efbf0aa4da8315e0082107e6c6854}{Song}} (int a\+Track\+Number, Q\+String a\+Album\+Name, Q\+String a\+Artist\+Name, Q\+String a\+File\+Path, Q\+String a\+Song\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor for a song. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_song_a0749c3367e8de89e27458c248377027b}{$\sim$\+Song}} ()
+\begin{DoxyCompactList}\small\item\em The destructor for a song. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_song_a34913925a88e1ca698aa33af96378d2f}{get\+Album\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the album that the song belongs to. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_song_a90ab22ea210ca1552d08f50da4c51ff5}{get\+Artist\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the artist that wrote the song. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_song_a2c71fd5ffa7343e7688554b2f9a10120}{get\+File\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Gets the path to the song file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_song_ab80f9bd4c1b971be3daa0df1aaa2bc89}{get\+Rank}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ranking of the song. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_song_a9507aeaa55d6c31f829e42432f6b5de3}{get\+Song\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the song. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_song_aafed63304c6f308bb0c55c3ac206ad4a}{get\+Track\+Number}} () const
+\begin{DoxyCompactList}\small\item\em Gets the track number of the song. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_ac9c21b02ebe7a5801c2f36f255b38e49}{set\+Album\+Name}} (Q\+String a\+Album\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the album that the song belongs to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_ab071f31965057c073c4e25a846810f8d}{set\+Artist\+Name}} (Q\+String a\+Artist\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the artist that wrote the song. {\itshape a\+Artist\+Name} The new name of the artist that wrote the song. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_ac2053f95eea7a3f96fb7d216e07637d7}{set\+File\+Path}} (Q\+String a\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Sets the path to the song file. {\itshape a\+File\+Path} The new file path to the song. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_acbfe66b799c390ea11be07907835f057}{set\+Rank}} (int a\+Rank)
+\begin{DoxyCompactList}\small\item\em Sets the ranking of the song in the sorting. {\itshape a\+Rank} The new ranking of the song. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_a8ae97c3e5d99c7e8df2e1b7b4f0274ec}{set\+Song\+Name}} (Q\+String a\+Song\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the song. {\itshape a\+Song\+Name} The new name of the song. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_ab005f32d793e26e83d67132931d46769}{set\+Track\+Number}} (int a\+Track\+Number)
+\begin{DoxyCompactList}\small\item\em Sets the track number of the song. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_song_a3e7e21ea87a93f305dbfd4cb9e6bf416}{operator$<$}} (const \mbox{\hyperlink{class_song}{Song}} \&a\+Other\+Song) const
+\begin{DoxyCompactList}\small\item\em Less than operator for a \mbox{\hyperlink{class_song}{Song}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_song_a1a6cc11df009afe710a7e6103e4c4221}{operator$>$}} (const \mbox{\hyperlink{class_song}{Song}} \&a\+Other\+Song) const
+\begin{DoxyCompactList}\small\item\em Greater than operator for a \mbox{\hyperlink{class_song}{Song}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_song_a3a4608e2f7744e5c1c8db350be3b24e9}{operator$<$=}} (const \mbox{\hyperlink{class_song}{Song}} \&a\+Other\+Song) const
+\begin{DoxyCompactList}\small\item\em Less than or equal operator for a \mbox{\hyperlink{class_song}{Song}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_song_aa51d7041e3cb45d2e8cd3e04eac3a16f}{operator$>$=}} (const \mbox{\hyperlink{class_song}{Song}} \&a\+Other\+Song) const
+\begin{DoxyCompactList}\small\item\em Greater than or equal operator for a \mbox{\hyperlink{class_song}{Song}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{m\+Rank}}
+\begin{DoxyCompactList}\small\item\em The ranking of the song in the sorting. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_song_a45f2f019180a08117bc1992f16fdb5f7}{m\+Track\+Number}}
+\begin{DoxyCompactList}\small\item\em The track number of the song in its album. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_song_aadf3ea14887a9c5a36a1fe419d7d6222}{m\+Album\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the album containing the song. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_song_a53eb13c6325e01434ee370ba2d9af292}{m\+Artist\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the artist who wrote the song. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_song_af6852312a9369340908b7726d97979a6}{m\+File\+Path}}
+\begin{DoxyCompactList}\small\item\em The file path of the song. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_song_af7fae22fdde85f62397c5a3618e8e573}{m\+Song\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the song. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a \mbox{\hyperlink{class_song}{Song}}. 
+
+This class is a container that represents a \mbox{\hyperlink{class_song}{Song}} according to its metadata (artist, album, etc.) as well as its overall rank and file path. 
+
+Definition at line 9 of file song.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_song_a996efbf0aa4da8315e0082107e6c6854}\label{class_song_a996efbf0aa4da8315e0082107e6c6854}} 
+\index{Song@{Song}!Song@{Song}}
+\index{Song@{Song}!Song@{Song}}
+\subsubsection{\texorpdfstring{Song()}{Song()}}
+{\footnotesize\ttfamily Song\+::\+Song (\begin{DoxyParamCaption}\item[{int}]{a\+Track\+Number = {\ttfamily 1},  }\item[{Q\+String}]{a\+Album\+Name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{Q\+String}]{a\+Artist\+Name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{Q\+String}]{a\+File\+Path = {\ttfamily \char`\"{}\char`\"{}},  }\item[{Q\+String}]{a\+Song\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor for a song. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Track\+Number} & The track number of the song. Defaults to 1. \\
+\hline
+{\em a\+Album\+Name} & The name of the album which the song belongs to. Defaults to an empty string. \\
+\hline
+{\em a\+Artist\+Name} & The name of the artist who made the song. Defaults to an empty string. \\
+\hline
+{\em a\+File\+Path} & The file path to the song. Defaults to an empty string. \\
+\hline
+{\em a\+Song\+Name} & The name of the song. Defaults to an empty string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+24                                                                                                            
+                             :
+25     \mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}}(\mbox{\hyperlink{song_8h_a2909ea516dd5d86c56e6a2e8035fed92}{UNRANKED}}),
+26     \mbox{\hyperlink{class_song_a45f2f019180a08117bc1992f16fdb5f7}{mTrackNumber}}(aTrackNumber),
+27     \mbox{\hyperlink{class_song_aadf3ea14887a9c5a36a1fe419d7d6222}{mAlbumName}}(aAlbumName),
+28     \mbox{\hyperlink{class_song_a53eb13c6325e01434ee370ba2d9af292}{mArtistName}}(aArtistName),
+29     \mbox{\hyperlink{class_song_af6852312a9369340908b7726d97979a6}{mFilePath}}(aFilePath),
+30     \mbox{\hyperlink{class_song_af7fae22fdde85f62397c5a3618e8e573}{mSongName}}(aSongName)
+31 \{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_a0749c3367e8de89e27458c248377027b}\label{class_song_a0749c3367e8de89e27458c248377027b}} 
+\index{Song@{Song}!````~Song@{$\sim$\+Song}}
+\index{````~Song@{$\sim$\+Song}!Song@{Song}}
+\subsubsection{\texorpdfstring{$\sim$\+Song()}{~Song()}}
+{\footnotesize\ttfamily Song\+::$\sim$\+Song (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The destructor for a song. 
+
+
+
+Definition at line 36 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+37 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_song_a34913925a88e1ca698aa33af96378d2f}\label{class_song_a34913925a88e1ca698aa33af96378d2f}} 
+\index{Song@{Song}!get\+Album\+Name@{get\+Album\+Name}}
+\index{get\+Album\+Name@{get\+Album\+Name}!Song@{Song}}
+\subsubsection{\texorpdfstring{get\+Album\+Name()}{getAlbumName()}}
+{\footnotesize\ttfamily Q\+String Song\+::get\+Album\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the album that the song belongs to. 
+
+\begin{DoxyReturn}{Returns}
+A Q\+String representing the name of the album that the song belongs to. 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+48 \{
+49     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_aadf3ea14887a9c5a36a1fe419d7d6222}{mAlbumName}};
+50 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_a90ab22ea210ca1552d08f50da4c51ff5}\label{class_song_a90ab22ea210ca1552d08f50da4c51ff5}} 
+\index{Song@{Song}!get\+Artist\+Name@{get\+Artist\+Name}}
+\index{get\+Artist\+Name@{get\+Artist\+Name}!Song@{Song}}
+\subsubsection{\texorpdfstring{get\+Artist\+Name()}{getArtistName()}}
+{\footnotesize\ttfamily Q\+String Song\+::get\+Artist\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the artist that wrote the song. 
+
+\begin{DoxyReturn}{Returns}
+A Q\+String representing the name of the artist that wrote the song. 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+57 \{
+58     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_a53eb13c6325e01434ee370ba2d9af292}{mArtistName}};
+59 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_a2c71fd5ffa7343e7688554b2f9a10120}\label{class_song_a2c71fd5ffa7343e7688554b2f9a10120}} 
+\index{Song@{Song}!get\+File\+Path@{get\+File\+Path}}
+\index{get\+File\+Path@{get\+File\+Path}!Song@{Song}}
+\subsubsection{\texorpdfstring{get\+File\+Path()}{getFilePath()}}
+{\footnotesize\ttfamily Q\+String Song\+::get\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the path to the song file. 
+
+\begin{DoxyReturn}{Returns}
+A Q\+String representing the file path of the song. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+66 \{
+67     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_af6852312a9369340908b7726d97979a6}{mFilePath}};
+68 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_ab80f9bd4c1b971be3daa0df1aaa2bc89}\label{class_song_ab80f9bd4c1b971be3daa0df1aaa2bc89}} 
+\index{Song@{Song}!get\+Rank@{get\+Rank}}
+\index{get\+Rank@{get\+Rank}!Song@{Song}}
+\subsubsection{\texorpdfstring{get\+Rank()}{getRank()}}
+{\footnotesize\ttfamily int Song\+::get\+Rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the ranking of the song. 
+
+\begin{DoxyReturn}{Returns}
+An integer representing the ranking of the song in the sorting. 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+75 \{
+76     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}};
+77 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_a9507aeaa55d6c31f829e42432f6b5de3}\label{class_song_a9507aeaa55d6c31f829e42432f6b5de3}} 
+\index{Song@{Song}!get\+Song\+Name@{get\+Song\+Name}}
+\index{get\+Song\+Name@{get\+Song\+Name}!Song@{Song}}
+\subsubsection{\texorpdfstring{get\+Song\+Name()}{getSongName()}}
+{\footnotesize\ttfamily Q\+String Song\+::get\+Song\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the song. 
+
+\begin{DoxyReturn}{Returns}
+A Q\+String representing the name of song. 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+84 \{
+85     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_af7fae22fdde85f62397c5a3618e8e573}{mSongName}};
+86 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_aafed63304c6f308bb0c55c3ac206ad4a}\label{class_song_aafed63304c6f308bb0c55c3ac206ad4a}} 
+\index{Song@{Song}!get\+Track\+Number@{get\+Track\+Number}}
+\index{get\+Track\+Number@{get\+Track\+Number}!Song@{Song}}
+\subsubsection{\texorpdfstring{get\+Track\+Number()}{getTrackNumber()}}
+{\footnotesize\ttfamily int Song\+::get\+Track\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the track number of the song. 
+
+\begin{DoxyReturn}{Returns}
+An integer representing the track number of the song. 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+93 \{
+94     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_a45f2f019180a08117bc1992f16fdb5f7}{mTrackNumber}};
+95 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_a3e7e21ea87a93f305dbfd4cb9e6bf416}\label{class_song_a3e7e21ea87a93f305dbfd4cb9e6bf416}} 
+\index{Song@{Song}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Song@{Song}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Song\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_song}{Song}} \&}]{a\+Other\+Song }\end{DoxyParamCaption}) const}
+
+
+
+Less than operator for a \mbox{\hyperlink{class_song}{Song}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Other\+Song} & The song to compare to this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this \mbox{\hyperlink{class_song}{Song}}\textquotesingle{}s rank is less than a\+Other\+Song\textquotesingle{}s rank. 
+\end{DoxyReturn}
+
+
+Definition at line 164 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+165 \{
+166     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}} < aOtherSong.\mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}};
+167 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_a3a4608e2f7744e5c1c8db350be3b24e9}\label{class_song_a3a4608e2f7744e5c1c8db350be3b24e9}} 
+\index{Song@{Song}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Song@{Song}}
+\subsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool Song\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_song}{Song}} \&}]{a\+Other\+Song }\end{DoxyParamCaption}) const}
+
+
+
+Less than or equal operator for a \mbox{\hyperlink{class_song}{Song}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Other\+Song} & The song to compare to this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this \mbox{\hyperlink{class_song}{Song}}\textquotesingle{}s rank is less than or equal to a\+Other\+Song\textquotesingle{}s rank. 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+185 \{
+186     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}} <= aOtherSong.\mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}};
+187 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_a1a6cc11df009afe710a7e6103e4c4221}\label{class_song_a1a6cc11df009afe710a7e6103e4c4221}} 
+\index{Song@{Song}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Song@{Song}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Song\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_song}{Song}} \&}]{a\+Other\+Song }\end{DoxyParamCaption}) const}
+
+
+
+Greater than operator for a \mbox{\hyperlink{class_song}{Song}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Other\+Song} & The song to compare to this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this \mbox{\hyperlink{class_song}{Song}}\textquotesingle{}s rank is greater than a\+Other\+Song\textquotesingle{}s rank. 
+\end{DoxyReturn}
+
+
+Definition at line 174 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+175 \{
+176     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}} > aOtherSong.\mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}};
+177 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_aa51d7041e3cb45d2e8cd3e04eac3a16f}\label{class_song_aa51d7041e3cb45d2e8cd3e04eac3a16f}} 
+\index{Song@{Song}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Song@{Song}}
+\subsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool Song\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_song}{Song}} \&}]{a\+Other\+Song }\end{DoxyParamCaption}) const}
+
+
+
+Greater than or equal operator for a \mbox{\hyperlink{class_song}{Song}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Other\+Song} & The song to compare to this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this \mbox{\hyperlink{class_song}{Song}}\textquotesingle{}s rank is greater than or equal to a\+Other\+Song\textquotesingle{}s rank. 
+\end{DoxyReturn}
+
+
+Definition at line 194 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+195 \{
+196     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}} >= aOtherSong.\mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}};
+197 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_ac9c21b02ebe7a5801c2f36f255b38e49}\label{class_song_ac9c21b02ebe7a5801c2f36f255b38e49}} 
+\index{Song@{Song}!set\+Album\+Name@{set\+Album\+Name}}
+\index{set\+Album\+Name@{set\+Album\+Name}!Song@{Song}}
+\subsubsection{\texorpdfstring{set\+Album\+Name()}{setAlbumName()}}
+{\footnotesize\ttfamily void Song\+::set\+Album\+Name (\begin{DoxyParamCaption}\item[{Q\+String}]{a\+Album\+Name }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the album that the song belongs to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Album\+Name} & The new name of the album that the song belongs to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 101 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+102 \{
+103     \mbox{\hyperlink{class_song_aadf3ea14887a9c5a36a1fe419d7d6222}{mAlbumName}} = aAlbumName;
+104 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_ab071f31965057c073c4e25a846810f8d}\label{class_song_ab071f31965057c073c4e25a846810f8d}} 
+\index{Song@{Song}!set\+Artist\+Name@{set\+Artist\+Name}}
+\index{set\+Artist\+Name@{set\+Artist\+Name}!Song@{Song}}
+\subsubsection{\texorpdfstring{set\+Artist\+Name()}{setArtistName()}}
+{\footnotesize\ttfamily void Song\+::set\+Artist\+Name (\begin{DoxyParamCaption}\item[{Q\+String}]{a\+Artist\+Name }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the artist that wrote the song. {\itshape a\+Artist\+Name} The new name of the artist that wrote the song. 
+
+
+
+Definition at line 111 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+112 \{
+113     \mbox{\hyperlink{class_song_a53eb13c6325e01434ee370ba2d9af292}{mArtistName}} = aArtistName;
+114 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_ac2053f95eea7a3f96fb7d216e07637d7}\label{class_song_ac2053f95eea7a3f96fb7d216e07637d7}} 
+\index{Song@{Song}!set\+File\+Path@{set\+File\+Path}}
+\index{set\+File\+Path@{set\+File\+Path}!Song@{Song}}
+\subsubsection{\texorpdfstring{set\+File\+Path()}{setFilePath()}}
+{\footnotesize\ttfamily void Song\+::set\+File\+Path (\begin{DoxyParamCaption}\item[{Q\+String}]{a\+File\+Path }\end{DoxyParamCaption})}
+
+
+
+Sets the path to the song file. {\itshape a\+File\+Path} The new file path to the song. 
+
+
+
+Definition at line 121 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+122 \{
+123     \mbox{\hyperlink{class_song_af6852312a9369340908b7726d97979a6}{mFilePath}} = aFilePath;
+124 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_acbfe66b799c390ea11be07907835f057}\label{class_song_acbfe66b799c390ea11be07907835f057}} 
+\index{Song@{Song}!set\+Rank@{set\+Rank}}
+\index{set\+Rank@{set\+Rank}!Song@{Song}}
+\subsubsection{\texorpdfstring{set\+Rank()}{setRank()}}
+{\footnotesize\ttfamily void Song\+::set\+Rank (\begin{DoxyParamCaption}\item[{int}]{a\+Rank }\end{DoxyParamCaption})}
+
+
+
+Sets the ranking of the song in the sorting. {\itshape a\+Rank} The new ranking of the song. 
+
+
+
+Definition at line 131 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+132 \{
+133     \mbox{\hyperlink{class_song_a18b47d2545fc5e7795cad143092c97e7}{mRank}} = aRank;
+134 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_a8ae97c3e5d99c7e8df2e1b7b4f0274ec}\label{class_song_a8ae97c3e5d99c7e8df2e1b7b4f0274ec}} 
+\index{Song@{Song}!set\+Song\+Name@{set\+Song\+Name}}
+\index{set\+Song\+Name@{set\+Song\+Name}!Song@{Song}}
+\subsubsection{\texorpdfstring{set\+Song\+Name()}{setSongName()}}
+{\footnotesize\ttfamily void Song\+::set\+Song\+Name (\begin{DoxyParamCaption}\item[{Q\+String}]{a\+Song\+Name }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the song. {\itshape a\+Song\+Name} The new name of the song. 
+
+
+
+Definition at line 141 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+142 \{
+143     \mbox{\hyperlink{class_song_af7fae22fdde85f62397c5a3618e8e573}{mSongName}} = aSongName;
+144 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_ab005f32d793e26e83d67132931d46769}\label{class_song_ab005f32d793e26e83d67132931d46769}} 
+\index{Song@{Song}!set\+Track\+Number@{set\+Track\+Number}}
+\index{set\+Track\+Number@{set\+Track\+Number}!Song@{Song}}
+\subsubsection{\texorpdfstring{set\+Track\+Number()}{setTrackNumber()}}
+{\footnotesize\ttfamily void Song\+::set\+Track\+Number (\begin{DoxyParamCaption}\item[{int}]{a\+Track\+Number }\end{DoxyParamCaption})}
+
+
+
+Sets the track number of the song. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Track\+Number} & The new track number of the song. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 150 of file song.\+cpp.
+
+
+\begin{DoxyCode}
+151 \{
+152     \mbox{\hyperlink{class_song_a45f2f019180a08117bc1992f16fdb5f7}{mTrackNumber}} = aTrackNumber;
+153 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_song_aadf3ea14887a9c5a36a1fe419d7d6222}\label{class_song_aadf3ea14887a9c5a36a1fe419d7d6222}} 
+\index{Song@{Song}!m\+Album\+Name@{m\+Album\+Name}}
+\index{m\+Album\+Name@{m\+Album\+Name}!Song@{Song}}
+\subsubsection{\texorpdfstring{m\+Album\+Name}{mAlbumName}}
+{\footnotesize\ttfamily Q\+String Song\+::m\+Album\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name of the album containing the song. 
+
+
+
+Definition at line 38 of file song.\+h.
+
+\mbox{\Hypertarget{class_song_a53eb13c6325e01434ee370ba2d9af292}\label{class_song_a53eb13c6325e01434ee370ba2d9af292}} 
+\index{Song@{Song}!m\+Artist\+Name@{m\+Artist\+Name}}
+\index{m\+Artist\+Name@{m\+Artist\+Name}!Song@{Song}}
+\subsubsection{\texorpdfstring{m\+Artist\+Name}{mArtistName}}
+{\footnotesize\ttfamily Q\+String Song\+::m\+Artist\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name of the artist who wrote the song. 
+
+
+
+Definition at line 39 of file song.\+h.
+
+\mbox{\Hypertarget{class_song_af6852312a9369340908b7726d97979a6}\label{class_song_af6852312a9369340908b7726d97979a6}} 
+\index{Song@{Song}!m\+File\+Path@{m\+File\+Path}}
+\index{m\+File\+Path@{m\+File\+Path}!Song@{Song}}
+\subsubsection{\texorpdfstring{m\+File\+Path}{mFilePath}}
+{\footnotesize\ttfamily Q\+String Song\+::m\+File\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The file path of the song. 
+
+
+
+Definition at line 40 of file song.\+h.
+
+\mbox{\Hypertarget{class_song_a18b47d2545fc5e7795cad143092c97e7}\label{class_song_a18b47d2545fc5e7795cad143092c97e7}} 
+\index{Song@{Song}!m\+Rank@{m\+Rank}}
+\index{m\+Rank@{m\+Rank}!Song@{Song}}
+\subsubsection{\texorpdfstring{m\+Rank}{mRank}}
+{\footnotesize\ttfamily int Song\+::m\+Rank\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The ranking of the song in the sorting. 
+
+
+
+Definition at line 36 of file song.\+h.
+
+\mbox{\Hypertarget{class_song_af7fae22fdde85f62397c5a3618e8e573}\label{class_song_af7fae22fdde85f62397c5a3618e8e573}} 
+\index{Song@{Song}!m\+Song\+Name@{m\+Song\+Name}}
+\index{m\+Song\+Name@{m\+Song\+Name}!Song@{Song}}
+\subsubsection{\texorpdfstring{m\+Song\+Name}{mSongName}}
+{\footnotesize\ttfamily Q\+String Song\+::m\+Song\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name of the song. 
+
+
+
+Definition at line 41 of file song.\+h.
+
+\mbox{\Hypertarget{class_song_a45f2f019180a08117bc1992f16fdb5f7}\label{class_song_a45f2f019180a08117bc1992f16fdb5f7}} 
+\index{Song@{Song}!m\+Track\+Number@{m\+Track\+Number}}
+\index{m\+Track\+Number@{m\+Track\+Number}!Song@{Song}}
+\subsubsection{\texorpdfstring{m\+Track\+Number}{mTrackNumber}}
+{\footnotesize\ttfamily int Song\+::m\+Track\+Number\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The track number of the song in its album. 
+
+
+
+Definition at line 37 of file song.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+song\+Handling/\mbox{\hyperlink{song_8h}{song.\+h}}\item 
+song\+Handling/\mbox{\hyperlink{song_8cpp}{song.\+cpp}}\end{DoxyCompactItemize}

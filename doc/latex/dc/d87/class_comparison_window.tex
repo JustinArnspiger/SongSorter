@@ -1,0 +1,114 @@
+\hypertarget{class_comparison_window}{}\section{Comparison\+Window Class Reference}
+\label{class_comparison_window}\index{Comparison\+Window@{Comparison\+Window}}
+
+
+Contains the UI handling for the comparison window.
+
+This class handles the various UI events that can occur on the comparison window.  
+
+
+
+
+{\ttfamily \#include $<$comparisonwindow.\+h$>$}
+
+Inheritance diagram for Comparison\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dc/d87/class_comparison_window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_comparison_window_addc31fc48e96a30d630166cb377c3869}{Comparison\+Window}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em The constructor for the \mbox{\hyperlink{class_comparison_window}{Comparison\+Window}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_comparison_window_a8f22c497b2b938378a4a51dc7e3ae8f2}{$\sim$\+Comparison\+Window}} ()
+\begin{DoxyCompactList}\small\item\em The destructor for the comparison window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Comparison\+Window $\ast$ \mbox{\hyperlink{class_comparison_window_a18eb77b5884a928a8b958907d1565acf}{ui}}
+\begin{DoxyCompactList}\small\item\em The ui for the \mbox{\hyperlink{class_comparison_window}{Comparison\+Window}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the UI handling for the comparison window.
+
+This class handles the various UI events that can occur on the comparison window. 
+
+Definition at line 10 of file comparisonwindow.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_comparison_window_addc31fc48e96a30d630166cb377c3869}\label{class_comparison_window_addc31fc48e96a30d630166cb377c3869}} 
+\index{Comparison\+Window@{Comparison\+Window}!Comparison\+Window@{Comparison\+Window}}
+\index{Comparison\+Window@{Comparison\+Window}!Comparison\+Window@{Comparison\+Window}}
+\subsubsection{\texorpdfstring{Comparison\+Window()}{ComparisonWindow()}}
+{\footnotesize\ttfamily Comparison\+Window\+::\+Comparison\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The constructor for the \mbox{\hyperlink{class_comparison_window}{Comparison\+Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget of the \mbox{\hyperlink{class_comparison_window}{Comparison\+Window}}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file comparisonwindow.\+cpp.
+
+
+\begin{DoxyCode}
+20                                                   :
+21     QMainWindow(parent),
+22     \mbox{\hyperlink{class_comparison_window_a18eb77b5884a928a8b958907d1565acf}{ui}}(\textcolor{keyword}{new} Ui::ComparisonWindow)
+23 \{
+24     \mbox{\hyperlink{class_comparison_window_a18eb77b5884a928a8b958907d1565acf}{ui}}->setupUi(\textcolor{keyword}{this});
+25 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_comparison_window_a8f22c497b2b938378a4a51dc7e3ae8f2}\label{class_comparison_window_a8f22c497b2b938378a4a51dc7e3ae8f2}} 
+\index{Comparison\+Window@{Comparison\+Window}!````~Comparison\+Window@{$\sim$\+Comparison\+Window}}
+\index{````~Comparison\+Window@{$\sim$\+Comparison\+Window}!Comparison\+Window@{Comparison\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Comparison\+Window()}{~ComparisonWindow()}}
+{\footnotesize\ttfamily Comparison\+Window\+::$\sim$\+Comparison\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The destructor for the comparison window. 
+
+
+
+Definition at line 30 of file comparisonwindow.\+cpp.
+
+
+\begin{DoxyCode}
+31 \{
+32     \textcolor{keyword}{delete} \mbox{\hyperlink{class_comparison_window_a18eb77b5884a928a8b958907d1565acf}{ui}};
+33 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_comparison_window_a18eb77b5884a928a8b958907d1565acf}\label{class_comparison_window_a18eb77b5884a928a8b958907d1565acf}} 
+\index{Comparison\+Window@{Comparison\+Window}!ui@{ui}}
+\index{ui@{ui}!Comparison\+Window@{Comparison\+Window}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Comparison\+Window$\ast$ Comparison\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The ui for the \mbox{\hyperlink{class_comparison_window}{Comparison\+Window}}. 
+
+
+
+Definition at line 19 of file comparisonwindow.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+U\+I/\mbox{\hyperlink{comparisonwindow_8h}{comparisonwindow.\+h}}\item 
+U\+I/\mbox{\hyperlink{comparisonwindow_8cpp}{comparisonwindow.\+cpp}}\end{DoxyCompactItemize}

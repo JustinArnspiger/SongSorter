@@ -1,0 +1,921 @@
+\hypertarget{class_song_list_viewer_window}{}\section{Song\+List\+Viewer\+Window Class Reference}
+\label{class_song_list_viewer_window}\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+
+
+Allows the user to choose which songs to import from a folder.
+
+This class implements event handling for a window that displays lists of \mbox{\hyperlink{class_song}{songs}}. The window has different \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{modes}} that it can be run in, and these modes dictate the actions that are available for the user in the window.  
+
+
+
+
+{\ttfamily \#include $<$songlistviewerwindow.\+h$>$}
+
+Inheritance diagram for Song\+List\+Viewer\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/dcb/class_song_list_viewer_window}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_song_list_viewer_window_1_1song__edit}{song\+\_\+edit}}
+\begin{DoxyCompactList}\small\item\em Keeps tracks of edits that occur to a song in the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a9847037eeae7688b9cddf8700d425332}{C\+O\+N\+F\+I\+R\+M\+\_\+\+I\+M\+P\+O\+R\+T\+E\+D\+\_\+\+S\+O\+N\+GS}}, 
+\mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927ad119fc74405f78aff7ed2efda3eb7b74}{E\+D\+I\+T\+\_\+\+M\+A\+I\+N\+\_\+\+S\+O\+N\+G\+\_\+\+L\+I\+ST}}, 
+\mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a7fbcaf0d5c1145332e50928f877040b4}{S\+H\+O\+W\+\_\+\+R\+E\+S\+U\+L\+TS}}
+ \}
+\begin{DoxyCompactList}\small\item\em The different modes of the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{Song\+List\+Viewer\+Window\+::\+S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}} \mbox{\hyperlink{class_song_list_viewer_window_a2942818cc26b8ff9e29827f97356ac9c}{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}}
+\begin{DoxyCompactList}\small\item\em The different modes of the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_a2f54dad3e714cd08fd85080a8865f616}{import\+Cancelled}} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the window exits with unsaved changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_a72159650ecd17b063a01c97b38c9c3c4}{imported\+Songs\+Confirmed}} ()
+\begin{DoxyCompactList}\small\item\em Emitted when songs imported from a folder have been confirmed for inclusion in the sort. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_a6fb4b39cdd5f7b9a3f8b12bcb2ec4c35}{song\+List\+Edited}} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the main \mbox{\hyperlink{class_song}{Song}} list has been edited. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_aa87ae7b7b4d0620111303d1cad334320}{results\+Window\+Closed}} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the window exits when it is displaying the results of the sort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_song_list_viewer_window_a5691d305c3ccaeea7e0213c1722c5c38}{Song\+List\+Viewer\+Window}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_song_list_viewer_window_a563ac79baf2458f7f33c961fb433541d}{$\sim$\+Song\+List\+Viewer\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_ae26127c85ed57885461c5143be4ae1e9}{setup\+Song\+List\+Viewer\+Window}} (\mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}} a\+Song\+List\+Mode, Q\+List$<$ \mbox{\hyperlink{class_song}{Song}} $\ast$$>$ $\ast$a\+Song\+List)
+\begin{DoxyCompactList}\small\item\em Sets up the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_song_list_viewer_window_1_1song__edit}{Song\+List\+Viewer\+Window\+::song\+\_\+edit}} \mbox{\hyperlink{class_song_list_viewer_window_a9d231624b8aaaceace0c6c3e1e389893}{song\+\_\+edit}}
+\begin{DoxyCompactList}\small\item\em Keeps tracks of edits that occur to a song in the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_ad5f7f01b35b12fefb932fa8e10a83851}{close\+Event}} (Q\+Close\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Overrides the close\+Event from the Q\+Main\+Window parent class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_a8f8a21788c5f078302abe140bf80ac4c}{on\+\_\+button\+Box\+\_\+accepted}} ()
+\begin{DoxyCompactList}\small\item\em Handles changes being saved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_a6ba5d2cc5443329cf53bb4b20759af12}{on\+\_\+button\+Box\+\_\+rejected}} ()
+\begin{DoxyCompactList}\small\item\em Handles the cancel button being clicked. This function will just close the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_a51be8e61dee777db1408d4cd7da57070}{on\+\_\+song\+List\+Table\+Widget\+\_\+cell\+Changed}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Handles when the user edits an entry in the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_song_list_viewer_window_a7ed91cc8081f236e051a7255af708b79}{confirm\+Cancel}} ()
+\begin{DoxyCompactList}\small\item\em Shows a message box asking the user to confirm that they want to exit with unsaved changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_a5c13d4e89240659b95eb4b70ddc7f37d}{fill\+Table\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Fills the table in the window with the contents of the \mbox{\hyperlink{class_song}{Song}} list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_a6e956b2dc5372636eeeefbcb9e52c351}{update\+Number\+Of\+Songs\+Label}} ()
+\begin{DoxyCompactList}\small\item\em Updates the label at the bottom of the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_song_list_viewer_window_ad53bcfcb56d146d8ab1d9f91696b143f}{update\+Song\+List\+From\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Updates the songs with edits made in the dialog\textquotesingle{}s table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Song\+List\+Viewer\+Window $\ast$ \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}
+\begin{DoxyCompactList}\small\item\em The ui of the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_song_list_viewer_window_aa8fcb59a0ed81ec14c6ac611e1812c08}{m\+Changes\+Accepted}} = false
+\begin{DoxyCompactList}\small\item\em Whether or not the user has clicked ok to exit the window and save their changes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_song_list_viewer_window_a939acaa75e8260232852266a5891fb5f}{m\+Edits\+Occurred}} = false
+\begin{DoxyCompactList}\small\item\em Whether or not edits have occurred. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_song_list_viewer_window_a150efbd08beb368c4acc65621d03d35d}{m\+Unsaved\+Changes}} = false
+\begin{DoxyCompactList}\small\item\em Whether or not there are unsaved changes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_song_list_viewer_window_a92cc7fd927ce7dc144f0febb0fdfa434}{m\+Num\+Songs\+After\+Save}} = 0
+\begin{DoxyCompactList}\small\item\em The number of songs that will be in the saved song list should the user save. \end{DoxyCompactList}\item 
+Q\+List$<$ \mbox{\hyperlink{class_song}{Song}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{m\+Song\+List}} = nullptr
+\begin{DoxyCompactList}\small\item\em The list of \mbox{\hyperlink{class_song}{songs}} that are displayed in the viewer. \end{DoxyCompactList}\item 
+Q\+Map$<$ int, \mbox{\hyperlink{struct_song_list_viewer_window_1_1song__edit}{song\+\_\+edit}} $>$ \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{m\+Song\+Edits}}
+\begin{DoxyCompactList}\small\item\em A map that connects the edits that have occurred to the index of the \mbox{\hyperlink{class_song}{Song}} in the song list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}} \mbox{\hyperlink{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}{m\+Song\+List\+Mode}} = \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a9847037eeae7688b9cddf8700d425332}{C\+O\+N\+F\+I\+R\+M\+\_\+\+I\+M\+P\+O\+R\+T\+E\+D\+\_\+\+S\+O\+N\+GS}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{mode}} that the song list viewer is in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const Q\+String \mbox{\hyperlink{class_song_list_viewer_window_aced76ec4265d0194f9b793133e661406}{ms\+Edit\+Main\+Song\+List\+Label}} = Q\+String(\char`\"{}Number of songs that will be sorted\+: \char`\"{})
+\begin{DoxyCompactList}\small\item\em The label at the bottom of the window when it is being used to edit the main song list. \end{DoxyCompactList}\item 
+static const Q\+String \mbox{\hyperlink{class_song_list_viewer_window_afd987f0161763fac7d03b0ccff54ef39}{ms\+Confirm\+Imported\+Songs\+Label}} = Q\+String(\char`\"{}Number of songs to import from folder\+: \char`\"{})
+\begin{DoxyCompactList}\small\item\em The label at the bottom of the window when it is being used to confirm imported songs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allows the user to choose which songs to import from a folder.
+
+This class implements event handling for a window that displays lists of \mbox{\hyperlink{class_song}{songs}}. The window has different \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{modes}} that it can be run in, and these modes dictate the actions that are available for the user in the window. 
+
+Definition at line 29 of file songlistviewerwindow.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_song_list_viewer_window_a9d231624b8aaaceace0c6c3e1e389893}\label{class_song_list_viewer_window_a9d231624b8aaaceace0c6c3e1e389893}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!song\+\_\+edit@{song\+\_\+edit}}
+\index{song\+\_\+edit@{song\+\_\+edit}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{song\+\_\+edit}{song\_edit}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_song_list_viewer_window_1_1song__edit}{Song\+List\+Viewer\+Window\+::song\+\_\+edit}}  \mbox{\hyperlink{struct_song_list_viewer_window_1_1song__edit}{Song\+List\+Viewer\+Window\+::song\+\_\+edit}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Keeps tracks of edits that occur to a song in the table. 
+
+\mbox{\Hypertarget{class_song_list_viewer_window_a2942818cc26b8ff9e29827f97356ac9c}\label{class_song_list_viewer_window_a2942818cc26b8ff9e29827f97356ac9c}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE@{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}}
+\index{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE@{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}{SONG\_LIST\_MODE}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{Song\+List\+Viewer\+Window\+::\+S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}}  \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{Song\+List\+Viewer\+Window\+::\+S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}}}
+
+
+
+The different modes of the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. 
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}\label{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE@{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}}
+\index{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE@{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}{SONG\_LIST\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{Song\+List\+Viewer\+Window\+::\+S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}}}
+
+
+
+The different modes of the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+O\+N\+F\+I\+R\+M\+\_\+\+I\+M\+P\+O\+R\+T\+E\+D\+\_\+\+S\+O\+N\+GS@{C\+O\+N\+F\+I\+R\+M\+\_\+\+I\+M\+P\+O\+R\+T\+E\+D\+\_\+\+S\+O\+N\+GS}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!C\+O\+N\+F\+I\+R\+M\+\_\+\+I\+M\+P\+O\+R\+T\+E\+D\+\_\+\+S\+O\+N\+GS@{C\+O\+N\+F\+I\+R\+M\+\_\+\+I\+M\+P\+O\+R\+T\+E\+D\+\_\+\+S\+O\+N\+GS}}}\mbox{\Hypertarget{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a9847037eeae7688b9cddf8700d425332}\label{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a9847037eeae7688b9cddf8700d425332}} 
+C\+O\+N\+F\+I\+R\+M\+\_\+\+I\+M\+P\+O\+R\+T\+E\+D\+\_\+\+S\+O\+N\+GS&Confirming songs imported from a folder. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+D\+I\+T\+\_\+\+M\+A\+I\+N\+\_\+\+S\+O\+N\+G\+\_\+\+L\+I\+ST@{E\+D\+I\+T\+\_\+\+M\+A\+I\+N\+\_\+\+S\+O\+N\+G\+\_\+\+L\+I\+ST}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!E\+D\+I\+T\+\_\+\+M\+A\+I\+N\+\_\+\+S\+O\+N\+G\+\_\+\+L\+I\+ST@{E\+D\+I\+T\+\_\+\+M\+A\+I\+N\+\_\+\+S\+O\+N\+G\+\_\+\+L\+I\+ST}}}\mbox{\Hypertarget{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927ad119fc74405f78aff7ed2efda3eb7b74}\label{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927ad119fc74405f78aff7ed2efda3eb7b74}} 
+E\+D\+I\+T\+\_\+\+M\+A\+I\+N\+\_\+\+S\+O\+N\+G\+\_\+\+L\+I\+ST&Editing the main list of songs before sorting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+H\+O\+W\+\_\+\+R\+E\+S\+U\+L\+TS@{S\+H\+O\+W\+\_\+\+R\+E\+S\+U\+L\+TS}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!S\+H\+O\+W\+\_\+\+R\+E\+S\+U\+L\+TS@{S\+H\+O\+W\+\_\+\+R\+E\+S\+U\+L\+TS}}}\mbox{\Hypertarget{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a7fbcaf0d5c1145332e50928f877040b4}\label{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a7fbcaf0d5c1145332e50928f877040b4}} 
+S\+H\+O\+W\+\_\+\+R\+E\+S\+U\+L\+TS&Showing the results of the sort. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 37 of file songlistviewerwindow.\+h.
+
+
+\begin{DoxyCode}
+38         \{
+39             \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a9847037eeae7688b9cddf8700d425332}{CONFIRM\_IMPORTED\_SONGS}}, \textcolor{comment}{//!< Confirming songs imported from a folder.}
+40 \textcolor{comment}{}            \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927ad119fc74405f78aff7ed2efda3eb7b74}{EDIT\_MAIN\_SONG\_LIST}}, \textcolor{comment}{//!< Editing the main list of songs before sorting.}
+41 \textcolor{comment}{}            \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a7fbcaf0d5c1145332e50928f877040b4}{SHOW\_RESULTS}} \textcolor{comment}{//!< Showing the results of the sort.}
+42 \textcolor{comment}{}        \} \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{SONG\_LIST\_MODE}};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_song_list_viewer_window_a5691d305c3ccaeea7e0213c1722c5c38}\label{class_song_list_viewer_window_a5691d305c3ccaeea7e0213c1722c5c38}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{Song\+List\+Viewer\+Window()}{SongListViewerWindow()}}
+{\footnotesize\ttfamily Song\+List\+Viewer\+Window\+::\+Song\+List\+Viewer\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+28                                                           :
+29     QMainWindow(parent),
+30     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}(\textcolor{keyword}{new} Ui::SongListViewerWindow)
+31 \{
+32     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->setupUi(\textcolor{keyword}{this});
+33 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_list_viewer_window_a563ac79baf2458f7f33c961fb433541d}\label{class_song_list_viewer_window_a563ac79baf2458f7f33c961fb433541d}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!````~Song\+List\+Viewer\+Window@{$\sim$\+Song\+List\+Viewer\+Window}}
+\index{````~Song\+List\+Viewer\+Window@{$\sim$\+Song\+List\+Viewer\+Window}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Song\+List\+Viewer\+Window()}{~SongListViewerWindow()}}
+{\footnotesize\ttfamily Song\+List\+Viewer\+Window\+::$\sim$\+Song\+List\+Viewer\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. 
+
+
+
+Definition at line 38 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+39 \{
+40     \textcolor{keyword}{delete} \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}};
+41 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_song_list_viewer_window_ad5f7f01b35b12fefb932fa8e10a83851}\label{class_song_list_viewer_window_ad5f7f01b35b12fefb932fa8e10a83851}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!close\+Event@{close\+Event}}
+\index{close\+Event@{close\+Event}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{close\+Event}{closeEvent}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::close\+Event (\begin{DoxyParamCaption}\item[{Q\+Close\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Overrides the close\+Event from the Q\+Main\+Window parent class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The close event.\\
+\hline
+\end{DoxyParams}
+This function will show a dialog asking the user to confirm that they want to discard unsaved changes if applicable. 
+
+Definition at line 75 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+76 \{
+77     \textcolor{keyword}{event}->ignore();
+78     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_a150efbd08beb368c4acc65621d03d35d}{mUnsavedChanges}})
+79     \{
+80         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_a7ed91cc8081f236e051a7255af708b79}{confirmCancel}}())
+81         \{
+82             \mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}} = \textcolor{keyword}{nullptr};
+83             emit \mbox{\hyperlink{class_song_list_viewer_window_a2f54dad3e714cd08fd85080a8865f616}{importCancelled}}();
+84             \textcolor{keyword}{event}->accept();
+85         \}
+86     \}
+87     \textcolor{keywordflow}{else}
+88     \{
+89         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}{mSongListMode}} == SONG\_LIST\_MODE::EDIT\_MAIN\_SONG\_LIST)
+90         \{
+91             emit \mbox{\hyperlink{class_song_list_viewer_window_a6fb4b39cdd5f7b9a3f8b12bcb2ec4c35}{songListEdited}}();
+92         \}
+93         \textcolor{keyword}{event}->accept();
+94     \}
+95 
+96 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_list_viewer_window_a7ed91cc8081f236e051a7255af708b79}\label{class_song_list_viewer_window_a7ed91cc8081f236e051a7255af708b79}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!confirm\+Cancel@{confirm\+Cancel}}
+\index{confirm\+Cancel@{confirm\+Cancel}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{confirm\+Cancel()}{confirmCancel()}}
+{\footnotesize\ttfamily bool Song\+List\+Viewer\+Window\+::confirm\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Shows a message box asking the user to confirm that they want to exit with unsaved changes. 
+
+\begin{DoxyReturn}{Returns}
+True if the user confirms they want to discard their unsaved changes. False otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 204 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+205 \{
+206     \textcolor{comment}{// Declare Variables.}
+207     \textcolor{keywordtype}{bool} confirmed = \textcolor{keyword}{false};
+208     QMessageBox confirmCancelBox;
+209 
+210     \textcolor{comment}{// Set up the message box.}
+211     confirmCancelBox.setText(\textcolor{stringliteral}{"Exit the song list viewer?\(\backslash\)nYour changes will not be saved"});
+212     confirmCancelBox.setStandardButtons(QMessageBox::Cancel);
+213     QPushButton* exitButton = confirmCancelBox.addButton(\textcolor{stringliteral}{"Exit"}, QMessageBox::YesRole);
+214 
+215     \textcolor{comment}{// Display the message box and mark the result.}
+216     confirmCancelBox.exec();
+217     confirmed = ((QPushButton*)confirmCancelBox.clickedButton() == exitButton);
+218     \textcolor{keywordflow}{if}(exitButton != \textcolor{keyword}{nullptr})
+219     \{
+220         \textcolor{keyword}{delete} exitButton;
+221         exitButton = \textcolor{keyword}{nullptr};
+222     \}
+223 
+224     \textcolor{keywordflow}{return} confirmed;
+225 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_list_viewer_window_a5c13d4e89240659b95eb4b70ddc7f37d}\label{class_song_list_viewer_window_a5c13d4e89240659b95eb4b70ddc7f37d}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!fill\+Table\+Widget@{fill\+Table\+Widget}}
+\index{fill\+Table\+Widget@{fill\+Table\+Widget}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{fill\+Table\+Widget()}{fillTableWidget()}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::fill\+Table\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fills the table in the window with the contents of the \mbox{\hyperlink{class_song}{Song}} list. 
+
+The table is formatted as follows\+: ~\newline
+ If the window is in \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{S\+H\+O\+W\+\_\+\+R\+E\+S\+U\+L\+TS mode}}\+: ~\newline
+ Rank Artist Album Track Number \mbox{\hyperlink{class_song}{Song}} Name ~\newline
+ ~\newline
+ Otherwise, the table is\+: ~\newline
+ Keep? Artist Album Track Number \mbox{\hyperlink{class_song}{Song}} Name ~\newline
+ where the Keep column contains a checkbox. 
+
+Definition at line 238 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+239 \{
+240     \textcolor{comment}{// Block signals from the table temporarily so that we don't invoke the
+       on\_songListTableWidget\_cellChanged slot.}
+241     QSignalBlocker signalBlocker(\mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget);
+242 
+243     \textcolor{comment}{// Declare variables}
+244     \textcolor{keywordtype}{int} numSongs = \mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}}->count();
+245     QStringList headerLabels;
+246     QTableWidgetItem* artistItem = \textcolor{keyword}{nullptr};
+247     QTableWidgetItem* albumItem = \textcolor{keyword}{nullptr};
+248     QSpinBox* trackNumberItem = \textcolor{keyword}{nullptr};
+249     QTableWidgetItem* songNameItem = \textcolor{keyword}{nullptr};
+250 
+251     \textcolor{comment}{// Set the attributes of the table.}
+252     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setRowCount(numSongs);
+253     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setColumnCount(5);
+254     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setColumnWidth(\mbox{\hyperlink{songlistviewerwindow_8h_a43772c536452cd8ed0af845b585487bf}{CHECKBOX\_OR\_RANK\_COLUMN}}, 60);
+255     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setColumnWidth(\mbox{\hyperlink{songlistviewerwindow_8h_a4df933f03e6d62e433d019b597e25109}{ARTIST\_COLUMN}}, 390);
+256     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setColumnWidth(\mbox{\hyperlink{songlistviewerwindow_8h_a36e2a49e6de166851f1039129ea2a9fb}{ALBUM\_COLUMN}}, 390);
+257     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setColumnWidth(\mbox{\hyperlink{songlistviewerwindow_8h_ab082e8ecd5faa2301f1d67d8df3b0eee}{TRACK\_NUMBER\_COLUMN}}, 60);
+258     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setColumnWidth(\mbox{\hyperlink{songlistviewerwindow_8h_a7376276fcf9a1862cfadc5ab562d3672}{SONG\_NAME\_COLUMN}}, 390);
+259     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->verticalHeader()->setVisible(\textcolor{keyword}{false});
+260 
+261     \textcolor{comment}{// If we're confirming imported songs or allowing the user to edit the song list,}
+262     \textcolor{comment}{// then we want a checkbox to allow for the user to decide whether or not to include the song}
+263     \textcolor{comment}{// in the sorting. If we're showing the results, then we want to put the song ranking instead}
+264     \textcolor{comment}{// of the checkbox.}
+265     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}{mSongListMode}} == \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a7fbcaf0d5c1145332e50928f877040b4}{SHOW\_RESULTS}})
+266     \{
+267         headerLabels << \textcolor{stringliteral}{"Rank"};
+268     \}
+269     \textcolor{keywordflow}{else}
+270     \{
+271         headerLabels << \textcolor{stringliteral}{"Keep?"};
+272     \}
+273     headerLabels << \textcolor{stringliteral}{"Artist"} << \textcolor{stringliteral}{"Album"} << \textcolor{stringliteral}{"Track"} << \textcolor{stringliteral}{"Song Name"};
+274     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setHorizontalHeaderLabels(headerLabels);
+275 
+276     \textcolor{comment}{// Add all of the songs to the table.}
+277     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < numSongs; i++)
+278     \{
+279         \textcolor{comment}{// If we're showing the results of the sort, then we want to put the rank of the song}
+280         \textcolor{comment}{// in the first column. Otherwise, we want to put a checkbox.}
+281         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}{mSongListMode}} == \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a7fbcaf0d5c1145332e50928f877040b4}{SHOW\_RESULTS}})
+282         \{
+283             QTableWidgetItem* rankEntry = \textcolor{keyword}{new} QTableWidgetItem();
+284             rankEntry->setText(QString(\textcolor{stringliteral}{"%1"}).arg((*\mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}})[i]->getRank()));
+285             rankEntry->setFlags(rankEntry->flags() ^ Qt::ItemIsEditable);
+286             \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setItem(i, \mbox{\hyperlink{songlistviewerwindow_8h_a43772c536452cd8ed0af845b585487bf}{CHECKBOX\_OR\_RANK\_COLUMN}}, rankEntry
+      );
+287 
+288 
+289         \}
+290         \textcolor{keywordflow}{else}
+291         \{
+292             \textcolor{comment}{// Create a widget to contain the check box. We need this so the check box can}
+293             \textcolor{comment}{// be centered in the cell.}
+294             QWidget* checkBoxWidget = \textcolor{keyword}{new} QWidget(\mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget);
+295             QHBoxLayout* checkBoxWidgetLayout = \textcolor{keyword}{new} QHBoxLayout(checkBoxWidget);
+296             QCheckBox* checkBox = \textcolor{keyword}{new} QCheckBox(checkBoxWidget);
+297             checkBox->setChecked(\textcolor{keyword}{true});
+298             checkBoxWidgetLayout->setAlignment(Qt::AlignHCenter);
+299             checkBoxWidgetLayout->setContentsMargins(0, 0, 0, 0);
+300             checkBoxWidgetLayout->addWidget(checkBox);
+301             checkBoxWidget->setLayout(checkBoxWidgetLayout);
+302             \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setCellWidget(i, \mbox{\hyperlink{songlistviewerwindow_8h_a43772c536452cd8ed0af845b585487bf}{CHECKBOX\_OR\_RANK\_COLUMN}}, 
+      checkBoxWidget);
+303             connect(checkBox, &QCheckBox::toggled, [=]()\{ this->
+      \mbox{\hyperlink{class_song_list_viewer_window_a51be8e61dee777db1408d4cd7da57070}{on\_songListTableWidget\_cellChanged}}(i, 
+      \mbox{\hyperlink{songlistviewerwindow_8h_a43772c536452cd8ed0af845b585487bf}{CHECKBOX\_OR\_RANK\_COLUMN}});\});
+304         \}
+305 
+306         \textcolor{comment}{// Create the entries for the artist name, album name, and song name.}
+307         artistItem = \textcolor{keyword}{new} QTableWidgetItem((*\mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}})[i]->getArtistName());
+308         artistItem->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
+309         albumItem = \textcolor{keyword}{new} QTableWidgetItem((*\mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}})[i]->getAlbumName());
+310         albumItem->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
+311         songNameItem = \textcolor{keyword}{new} QTableWidgetItem((*\mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}})[i]->getSongName());
+312         songNameItem->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
+313 
+314         \textcolor{comment}{// Set up the track number entry. These entries require connecting to their valueChanged signal.}
+315         trackNumberItem = \textcolor{keyword}{new} QSpinBox(\mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget);
+316         trackNumberItem->setAlignment(Qt::AlignHCenter);
+317         trackNumberItem->setValue((*\mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}})[i]->getTrackNumber());
+318         connect(trackNumberItem, qOverload<int>(&QSpinBox::valueChanged), [=](\textcolor{keywordtype}{int})\{ this->
+      \mbox{\hyperlink{class_song_list_viewer_window_a51be8e61dee777db1408d4cd7da57070}{on\_songListTableWidget\_cellChanged}}(i,
+      \mbox{\hyperlink{songlistviewerwindow_8h_ab082e8ecd5faa2301f1d67d8df3b0eee}{TRACK\_NUMBER\_COLUMN}}); \});
+319 
+320         \textcolor{comment}{// Insert the items.}
+321         \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setItem(i, \mbox{\hyperlink{songlistviewerwindow_8h_a4df933f03e6d62e433d019b597e25109}{ARTIST\_COLUMN}}, artistItem);
+322         \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setItem(i, \mbox{\hyperlink{songlistviewerwindow_8h_a36e2a49e6de166851f1039129ea2a9fb}{ALBUM\_COLUMN}}, albumItem);
+323         \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setCellWidget(i, \mbox{\hyperlink{songlistviewerwindow_8h_ab082e8ecd5faa2301f1d67d8df3b0eee}{TRACK\_NUMBER\_COLUMN}}, trackNumberItem
+      );
+324         \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->setItem(i, \mbox{\hyperlink{songlistviewerwindow_8h_a7376276fcf9a1862cfadc5ab562d3672}{SONG\_NAME\_COLUMN}}, songNameItem);
+325     \}
+326 
+327     \textcolor{comment}{// We can unblock signals now that the table is filled.}
+328     signalBlocker.unblock();
+329 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_list_viewer_window_a2f54dad3e714cd08fd85080a8865f616}\label{class_song_list_viewer_window_a2f54dad3e714cd08fd85080a8865f616}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!import\+Cancelled@{import\+Cancelled}}
+\index{import\+Cancelled@{import\+Cancelled}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{import\+Cancelled}{importCancelled}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::import\+Cancelled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when the window exits with unsaved changes. 
+
+\mbox{\Hypertarget{class_song_list_viewer_window_a72159650ecd17b063a01c97b38c9c3c4}\label{class_song_list_viewer_window_a72159650ecd17b063a01c97b38c9c3c4}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!imported\+Songs\+Confirmed@{imported\+Songs\+Confirmed}}
+\index{imported\+Songs\+Confirmed@{imported\+Songs\+Confirmed}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{imported\+Songs\+Confirmed}{importedSongsConfirmed}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::imported\+Songs\+Confirmed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when songs imported from a folder have been confirmed for inclusion in the sort. 
+
+\mbox{\Hypertarget{class_song_list_viewer_window_a8f8a21788c5f078302abe140bf80ac4c}\label{class_song_list_viewer_window_a8f8a21788c5f078302abe140bf80ac4c}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!on\+\_\+button\+Box\+\_\+accepted@{on\+\_\+button\+Box\+\_\+accepted}}
+\index{on\+\_\+button\+Box\+\_\+accepted@{on\+\_\+button\+Box\+\_\+accepted}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+button\+Box\+\_\+accepted}{on\_buttonBox\_accepted}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::on\+\_\+button\+Box\+\_\+accepted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles changes being saved. 
+
+This function will \mbox{\hyperlink{class_song_list_viewer_window_ad53bcfcb56d146d8ab1d9f91696b143f}{update the list of songs}} and then emit the proper signal. 
+
+Definition at line 103 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+104 \{
+105     \textcolor{comment}{// Update the song list using the table if it's possible that it was edited.}
+106     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}{mSongListMode}} != \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a7fbcaf0d5c1145332e50928f877040b4}{SHOW\_RESULTS}})
+107     \{
+108         \mbox{\hyperlink{class_song_list_viewer_window_ad53bcfcb56d146d8ab1d9f91696b143f}{updateSongListFromTable}}();
+109     \}
+110 
+111     \textcolor{comment}{// Emit the proper signal.}
+112     \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}{mSongListMode}})
+113     \{
+114         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a9847037eeae7688b9cddf8700d425332}{CONFIRM\_IMPORTED\_SONGS}}:
+115             emit \mbox{\hyperlink{class_song_list_viewer_window_a72159650ecd17b063a01c97b38c9c3c4}{importedSongsConfirmed}}();
+116             \textcolor{keywordflow}{break};
+117         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927ad119fc74405f78aff7ed2efda3eb7b74}{EDIT\_MAIN\_SONG\_LIST}}:
+118             emit \mbox{\hyperlink{class_song_list_viewer_window_a6fb4b39cdd5f7b9a3f8b12bcb2ec4c35}{songListEdited}}();
+119             \textcolor{keywordflow}{break};
+120         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a7fbcaf0d5c1145332e50928f877040b4}{SHOW\_RESULTS}}:
+121             emit \mbox{\hyperlink{class_song_list_viewer_window_aa87ae7b7b4d0620111303d1cad334320}{resultsWindowClosed}}();
+122             \textcolor{keywordflow}{break};
+123         \textcolor{keywordflow}{default}:
+124             Q\_ASSERT\_X(\textcolor{keyword}{false}, \textcolor{stringliteral}{"SongListViewerWindow::on\_buttonBox\_accepted"}, \textcolor{stringliteral}{"Reached default case when it
+       shouldn't have!"});
+125             \textcolor{keywordflow}{break};
+126     \}
+127 
+128     \textcolor{comment}{// Clear dialog contents. The song list is shared, so we don't need to delete it.}
+129     \mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}} = \textcolor{keyword}{nullptr};
+130     \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->clear();
+131     \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}.clear();
+132     \mbox{\hyperlink{class_song_list_viewer_window_a150efbd08beb368c4acc65621d03d35d}{mUnsavedChanges}} = \textcolor{keyword}{false};
+133     close();
+134 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_list_viewer_window_a6ba5d2cc5443329cf53bb4b20759af12}\label{class_song_list_viewer_window_a6ba5d2cc5443329cf53bb4b20759af12}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!on\+\_\+button\+Box\+\_\+rejected@{on\+\_\+button\+Box\+\_\+rejected}}
+\index{on\+\_\+button\+Box\+\_\+rejected@{on\+\_\+button\+Box\+\_\+rejected}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+button\+Box\+\_\+rejected}{on\_buttonBox\_rejected}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::on\+\_\+button\+Box\+\_\+rejected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles the cancel button being clicked. This function will just close the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_song_list_viewer_window_ad5f7f01b35b12fefb932fa8e10a83851}{Song\+List\+Viewer\+Window\+::close\+Event}}. 
+\end{DoxySeeAlso}
+
+
+Definition at line 141 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+142 \{
+143     close();
+144 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_list_viewer_window_a51be8e61dee777db1408d4cd7da57070}\label{class_song_list_viewer_window_a51be8e61dee777db1408d4cd7da57070}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!on\+\_\+song\+List\+Table\+Widget\+\_\+cell\+Changed@{on\+\_\+song\+List\+Table\+Widget\+\_\+cell\+Changed}}
+\index{on\+\_\+song\+List\+Table\+Widget\+\_\+cell\+Changed@{on\+\_\+song\+List\+Table\+Widget\+\_\+cell\+Changed}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+song\+List\+Table\+Widget\+\_\+cell\+Changed}{on\_songListTableWidget\_cellChanged}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::on\+\_\+song\+List\+Table\+Widget\+\_\+cell\+Changed (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles when the user edits an entry in the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row of the entry that changed. This corresponds to the song that changed. \\
+\hline
+{\em column} & The column of the entry that changed. This corresponds to the field that changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Updating songs only occurs when the dialog is confirmed. See \mbox{\hyperlink{class_song_list_viewer_window_ad53bcfcb56d146d8ab1d9f91696b143f}{Song\+List\+Viewer\+Window\+::update\+Song\+List\+From\+Table}}. 
+\end{DoxyNote}
+
+
+Definition at line 153 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+154 \{
+155     \textcolor{comment}{// Mark that edits have occurred and that there are unsaved changes.}
+156     \mbox{\hyperlink{class_song_list_viewer_window_a939acaa75e8260232852266a5891fb5f}{mEditsOccurred}} = \textcolor{keyword}{true};
+157     \mbox{\hyperlink{class_song_list_viewer_window_a150efbd08beb368c4acc65621d03d35d}{mUnsavedChanges}} = \textcolor{keyword}{true};
+158 
+159     \textcolor{comment}{// See if this song has already been edited. If not, then add it to the map.}
+160     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}.contains(row))
+161     \{
+162         \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}.insert(row, \mbox{\hyperlink{class_song_list_viewer_window_a9d231624b8aaaceace0c6c3e1e389893}{song\_edit}}());
+163     \}
+164     \textcolor{comment}{// Mark that we should update the song if the dialog is confirmed.}
+165     \textcolor{keywordflow}{switch}(column)
+166     \{
+167         \textcolor{keywordflow}{case} \mbox{\hyperlink{songlistviewerwindow_8h_a43772c536452cd8ed0af845b585487bf}{CHECKBOX\_OR\_RANK\_COLUMN}}:
+168         \{
+169             \textcolor{comment}{// Note: Results can't be edited, so this case only matters for when the column has checkboxes.}
+170             \textcolor{comment}{// A checked checkbox means keep the song. If it's unchecked, then it means that the song
+       should be removed from the list.}
+171             QCheckBox* checkBox = (QCheckBox*)\mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->cellWidget(row, 
+      \mbox{\hyperlink{songlistviewerwindow_8h_a43772c536452cd8ed0af845b585487bf}{CHECKBOX\_OR\_RANK\_COLUMN}})->layout()->itemAt(0)->widget();
+172             \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[row].remove\_song = (!checkBox->isChecked());
+173             \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[row].remove\_song ? \mbox{\hyperlink{class_song_list_viewer_window_a92cc7fd927ce7dc144f0febb0fdfa434}{mNumSongsAfterSave}}-- : 
+      \mbox{\hyperlink{class_song_list_viewer_window_a92cc7fd927ce7dc144f0febb0fdfa434}{mNumSongsAfterSave}}++;
+174             \mbox{\hyperlink{class_song_list_viewer_window_a6e956b2dc5372636eeeefbcb9e52c351}{updateNumberOfSongsLabel}}();
+175             \textcolor{keywordflow}{break};
+176         \}
+177         \textcolor{keywordflow}{case} \mbox{\hyperlink{songlistviewerwindow_8h_a4df933f03e6d62e433d019b597e25109}{ARTIST\_COLUMN}}:
+178             \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[row].artist\_edited = \textcolor{keyword}{true};
+179             \textcolor{keywordflow}{break};
+180         \textcolor{keywordflow}{case} \mbox{\hyperlink{songlistviewerwindow_8h_a36e2a49e6de166851f1039129ea2a9fb}{ALBUM\_COLUMN}}:
+181             \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[row].album\_edited = \textcolor{keyword}{true};
+182             \textcolor{keywordflow}{break};
+183         \textcolor{keywordflow}{case} \mbox{\hyperlink{songlistviewerwindow_8h_ab082e8ecd5faa2301f1d67d8df3b0eee}{TRACK\_NUMBER\_COLUMN}}:
+184             \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[row].track\_number\_edited = \textcolor{keyword}{true};
+185             \textcolor{keywordflow}{break};
+186         \textcolor{keywordflow}{case} \mbox{\hyperlink{songlistviewerwindow_8h_a7376276fcf9a1862cfadc5ab562d3672}{SONG\_NAME\_COLUMN}}:
+187             \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[row].song\_name\_edited = \textcolor{keyword}{true};
+188             \textcolor{keywordflow}{break};
+189         \textcolor{keywordflow}{default}:
+190             Q\_ASSERT\_X(\textcolor{keyword}{false}, \textcolor{stringliteral}{"SongListViewerWindow::on\_songListTableWidget\_cellChanged"}, \textcolor{stringliteral}{"Reached default
+       case when we shouldn't have!"});
+191             \textcolor{keywordflow}{break};
+192     \}
+193 
+194 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_list_viewer_window_aa87ae7b7b4d0620111303d1cad334320}\label{class_song_list_viewer_window_aa87ae7b7b4d0620111303d1cad334320}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!results\+Window\+Closed@{results\+Window\+Closed}}
+\index{results\+Window\+Closed@{results\+Window\+Closed}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{results\+Window\+Closed}{resultsWindowClosed}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::results\+Window\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when the window exits when it is displaying the results of the sort. 
+
+\mbox{\Hypertarget{class_song_list_viewer_window_ae26127c85ed57885461c5143be4ae1e9}\label{class_song_list_viewer_window_ae26127c85ed57885461c5143be4ae1e9}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!setup\+Song\+List\+Viewer\+Window@{setup\+Song\+List\+Viewer\+Window}}
+\index{setup\+Song\+List\+Viewer\+Window@{setup\+Song\+List\+Viewer\+Window}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{setup\+Song\+List\+Viewer\+Window()}{setupSongListViewerWindow()}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::setup\+Song\+List\+Viewer\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}}}]{a\+Song\+List\+Mode,  }\item[{Q\+List$<$ \mbox{\hyperlink{class_song}{Song}} $\ast$$>$ $\ast$}]{a\+Song\+List }\end{DoxyParamCaption})}
+
+
+
+Sets up the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Song\+List\+Mode} & The new \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{mode}} of the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \\
+\hline
+{\em a\+Song\+List} & The \mbox{\hyperlink{class_song}{Song}} list to display in the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+53 \{
+54     \mbox{\hyperlink{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}{mSongListMode}} = aSongListMode;
+55     \mbox{\hyperlink{class_song_list_viewer_window_a150efbd08beb368c4acc65621d03d35d}{mUnsavedChanges}} = (aSongListMode == SONG\_LIST\_MODE::CONFIRM\_IMPORTED\_SONGS);
+56     \mbox{\hyperlink{class_song_list_viewer_window_a939acaa75e8260232852266a5891fb5f}{mEditsOccurred}} = \textcolor{keyword}{false};
+57     \mbox{\hyperlink{class_song_list_viewer_window_aa8fcb59a0ed81ec14c6ac611e1812c08}{mChangesAccepted}} = \textcolor{keyword}{false};
+58     \mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}} = aSongList;
+59     \mbox{\hyperlink{class_song_list_viewer_window_a92cc7fd927ce7dc144f0febb0fdfa434}{mNumSongsAfterSave}} = \mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}}->count();
+60     \mbox{\hyperlink{class_song_list_viewer_window_a6e956b2dc5372636eeeefbcb9e52c351}{updateNumberOfSongsLabel}}();
+61     \mbox{\hyperlink{class_song_list_viewer_window_a5c13d4e89240659b95eb4b70ddc7f37d}{fillTableWidget}}();
+62 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_list_viewer_window_a6fb4b39cdd5f7b9a3f8b12bcb2ec4c35}\label{class_song_list_viewer_window_a6fb4b39cdd5f7b9a3f8b12bcb2ec4c35}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!song\+List\+Edited@{song\+List\+Edited}}
+\index{song\+List\+Edited@{song\+List\+Edited}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{song\+List\+Edited}{songListEdited}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::song\+List\+Edited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when the main \mbox{\hyperlink{class_song}{Song}} list has been edited. 
+
+\mbox{\Hypertarget{class_song_list_viewer_window_a6e956b2dc5372636eeeefbcb9e52c351}\label{class_song_list_viewer_window_a6e956b2dc5372636eeeefbcb9e52c351}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!update\+Number\+Of\+Songs\+Label@{update\+Number\+Of\+Songs\+Label}}
+\index{update\+Number\+Of\+Songs\+Label@{update\+Number\+Of\+Songs\+Label}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{update\+Number\+Of\+Songs\+Label()}{updateNumberOfSongsLabel()}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::update\+Number\+Of\+Songs\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the label at the bottom of the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. 
+
+
+
+Definition at line 334 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+335 \{
+336     \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}{mSongListMode}})
+337     \{
+338         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a9847037eeae7688b9cddf8700d425332}{CONFIRM\_IMPORTED\_SONGS}}:
+339             \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->numSongsInTableLabel->show();
+340             \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->numSongsInTableLabel->setText(
+      \mbox{\hyperlink{class_song_list_viewer_window_afd987f0161763fac7d03b0ccff54ef39}{SongListViewerWindow::msConfirmImportedSongsLabel}} + 
+      QString(\textcolor{stringliteral}{"%1"}).arg(\mbox{\hyperlink{class_song_list_viewer_window_a92cc7fd927ce7dc144f0febb0fdfa434}{mNumSongsAfterSave}}));
+341             \textcolor{keywordflow}{break};
+342         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927ad119fc74405f78aff7ed2efda3eb7b74}{EDIT\_MAIN\_SONG\_LIST}}:
+343             \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->numSongsInTableLabel->show();
+344             \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->numSongsInTableLabel->setText(
+      \mbox{\hyperlink{class_song_list_viewer_window_aced76ec4265d0194f9b793133e661406}{SongListViewerWindow::msEditMainSongListLabel}} + QString(\textcolor{stringliteral}{"%1"}).
+      arg(\mbox{\hyperlink{class_song_list_viewer_window_a92cc7fd927ce7dc144f0febb0fdfa434}{mNumSongsAfterSave}}));
+345             \textcolor{keywordflow}{break};
+346         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a7fbcaf0d5c1145332e50928f877040b4}{SHOW\_RESULTS}}:
+347             \mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->numSongsInTableLabel->hide();
+348             \textcolor{keywordflow}{break};
+349         \textcolor{keywordflow}{default}:
+350             Q\_ASSERT\_X(\textcolor{keyword}{false}, \textcolor{stringliteral}{"SongListViewerWindow::updateNumberOfSongsLabel"}, \textcolor{stringliteral}{"Reached a default case
+       when we shouldn't have!"});
+351             \textcolor{keywordflow}{break};
+352     \}
+353 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_song_list_viewer_window_ad53bcfcb56d146d8ab1d9f91696b143f}\label{class_song_list_viewer_window_ad53bcfcb56d146d8ab1d9f91696b143f}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!update\+Song\+List\+From\+Table@{update\+Song\+List\+From\+Table}}
+\index{update\+Song\+List\+From\+Table@{update\+Song\+List\+From\+Table}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{update\+Song\+List\+From\+Table()}{updateSongListFromTable()}}
+{\footnotesize\ttfamily void Song\+List\+Viewer\+Window\+::update\+Song\+List\+From\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the songs with edits made in the dialog\textquotesingle{}s table. 
+
+When the user edits an entry in the \mbox{\hyperlink{class_song}{Song}} list, a \mbox{\hyperlink{struct_song_list_viewer_window_1_1song__edit}{struct}} is used to keep track of what changed. This function goes through all of the marked edits and updates the \mbox{\hyperlink{class_song}{songs}} in the list. This function is only called right before the window is closed if the user clicked the Ok button and either edits occurred or songs were imported. We only edit the \mbox{\hyperlink{class_song}{Song}} list in this function because if the edits were applied to the \mbox{\hyperlink{class_song}{Song}} at the time when the user makes them, these edits would be kept even if the window was cancelled. 
+
+Definition at line 365 of file songlistviewerwindow.\+cpp.
+
+
+\begin{DoxyCode}
+366 \{
+367     \textcolor{comment}{// See if we need to update any metadata.}
+368     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_a939acaa75e8260232852266a5891fb5f}{mEditsOccurred}})
+369     \{
+370         \textcolor{comment}{// The keys in the map correspond to a song's placement in the song list.}
+371         \textcolor{comment}{// Get them in descending order so that we can modify the song list}
+372         \textcolor{comment}{// without worrying about indices changing.}
+373         QList<int> songListIndices = \mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}.keys();
+374         std::sort(songListIndices.begin(), songListIndices.end(), std::greater<int>());
+375         QMutableListIterator<int> iter(songListIndices);
+376 
+377         \textcolor{comment}{// Declare variables.}
+378         \textcolor{keywordtype}{int} index = 0;
+379         QSpinBox* trackNumberSpinBox = \textcolor{keyword}{nullptr};
+380 
+381 
+382         \textcolor{comment}{// Handle all of the song edits.}
+383         \textcolor{keywordflow}{while}(iter.hasNext())
+384         \{
+385             index = iter.next();
+386 
+387             \textcolor{comment}{// See if we need to remove the song. Other edits for the song don't matter if we're}
+388             \textcolor{comment}{// removing it anyway.}
+389             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[index].remove\_song)
+390             \{
+391                 \mbox{\hyperlink{class_song}{Song}}* songToRemove = \mbox{\hyperlink{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}{mSongList}}->takeAt(index);
+392                 Q\_ASSERT\_X(songToRemove != \textcolor{keyword}{nullptr}, \textcolor{stringliteral}{"SongListViewerWindow::updateSongListFromTable"}, \textcolor{stringliteral}{"
+      Somehow we're trying to delete a null song!"});
+393                 \textcolor{keyword}{delete} songToRemove;
+394             \}
+395             \textcolor{keywordflow}{else}
+396             \{
+397                 \textcolor{comment}{// Update the metadata of the song as needed.}
+398                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[index].artist\_edited)
+399                 \{
+400                     (*mSongList)[index]->\mbox{\hyperlink{class_song_ab071f31965057c073c4e25a846810f8d}{setArtistName}}(\mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->item(index, 
+      \mbox{\hyperlink{songlistviewerwindow_8h_a4df933f03e6d62e433d019b597e25109}{ARTIST\_COLUMN}})->text());
+401                 \}
+402                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[index].album\_edited)
+403                 \{
+404                     (*mSongList)[index]->setAlbumName(\mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->item(index, 
+      \mbox{\hyperlink{songlistviewerwindow_8h_a36e2a49e6de166851f1039129ea2a9fb}{ALBUM\_COLUMN}})->text());
+405                 \}
+406                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[index].track\_number\_edited)
+407                 \{
+408                     trackNumberSpinBox = (QSpinBox*)\mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->cellWidget(index, 
+      \mbox{\hyperlink{songlistviewerwindow_8h_ab082e8ecd5faa2301f1d67d8df3b0eee}{TRACK\_NUMBER\_COLUMN}});
+409                     (*mSongList)[index]->setTrackNumber(trackNumberSpinBox->value());
+410                 \}
+411                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}{mSongEdits}}[index].song\_name\_edited)
+412                 \{
+413                     (*mSongList)[index]->setSongName(\mbox{\hyperlink{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}{ui}}->songListTableWidget->item(index, 
+      \mbox{\hyperlink{songlistviewerwindow_8h_a7376276fcf9a1862cfadc5ab562d3672}{SONG\_NAME\_COLUMN}})->text());
+414                 \}
+415             \}
+416         \}
+417     \}
+418 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_song_list_viewer_window_aa8fcb59a0ed81ec14c6ac611e1812c08}\label{class_song_list_viewer_window_aa8fcb59a0ed81ec14c6ac611e1812c08}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!m\+Changes\+Accepted@{m\+Changes\+Accepted}}
+\index{m\+Changes\+Accepted@{m\+Changes\+Accepted}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{m\+Changes\+Accepted}{mChangesAccepted}}
+{\footnotesize\ttfamily bool Song\+List\+Viewer\+Window\+::m\+Changes\+Accepted = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Whether or not the user has clicked ok to exit the window and save their changes. 
+
+
+
+Definition at line 81 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{class_song_list_viewer_window_a939acaa75e8260232852266a5891fb5f}\label{class_song_list_viewer_window_a939acaa75e8260232852266a5891fb5f}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!m\+Edits\+Occurred@{m\+Edits\+Occurred}}
+\index{m\+Edits\+Occurred@{m\+Edits\+Occurred}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{m\+Edits\+Occurred}{mEditsOccurred}}
+{\footnotesize\ttfamily bool Song\+List\+Viewer\+Window\+::m\+Edits\+Occurred = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Whether or not edits have occurred. 
+
+
+
+Definition at line 82 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{class_song_list_viewer_window_a92cc7fd927ce7dc144f0febb0fdfa434}\label{class_song_list_viewer_window_a92cc7fd927ce7dc144f0febb0fdfa434}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!m\+Num\+Songs\+After\+Save@{m\+Num\+Songs\+After\+Save}}
+\index{m\+Num\+Songs\+After\+Save@{m\+Num\+Songs\+After\+Save}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{m\+Num\+Songs\+After\+Save}{mNumSongsAfterSave}}
+{\footnotesize\ttfamily int Song\+List\+Viewer\+Window\+::m\+Num\+Songs\+After\+Save = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of songs that will be in the saved song list should the user save. 
+
+
+
+Definition at line 84 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{class_song_list_viewer_window_afd987f0161763fac7d03b0ccff54ef39}\label{class_song_list_viewer_window_afd987f0161763fac7d03b0ccff54ef39}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!ms\+Confirm\+Imported\+Songs\+Label@{ms\+Confirm\+Imported\+Songs\+Label}}
+\index{ms\+Confirm\+Imported\+Songs\+Label@{ms\+Confirm\+Imported\+Songs\+Label}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{ms\+Confirm\+Imported\+Songs\+Label}{msConfirmImportedSongsLabel}}
+{\footnotesize\ttfamily const Q\+String Song\+List\+Viewer\+Window\+::ms\+Confirm\+Imported\+Songs\+Label = Q\+String(\char`\"{}Number of songs to import from folder\+: \char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The label at the bottom of the window when it is being used to confirm imported songs. 
+
+
+
+Definition at line 90 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{class_song_list_viewer_window_aced76ec4265d0194f9b793133e661406}\label{class_song_list_viewer_window_aced76ec4265d0194f9b793133e661406}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!ms\+Edit\+Main\+Song\+List\+Label@{ms\+Edit\+Main\+Song\+List\+Label}}
+\index{ms\+Edit\+Main\+Song\+List\+Label@{ms\+Edit\+Main\+Song\+List\+Label}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{ms\+Edit\+Main\+Song\+List\+Label}{msEditMainSongListLabel}}
+{\footnotesize\ttfamily const Q\+String Song\+List\+Viewer\+Window\+::ms\+Edit\+Main\+Song\+List\+Label = Q\+String(\char`\"{}Number of songs that will be sorted\+: \char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The label at the bottom of the window when it is being used to edit the main song list. 
+
+
+
+Definition at line 89 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}\label{class_song_list_viewer_window_aa38d8a91dc7ebe0925602b3846c34fdc}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!m\+Song\+Edits@{m\+Song\+Edits}}
+\index{m\+Song\+Edits@{m\+Song\+Edits}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{m\+Song\+Edits}{mSongEdits}}
+{\footnotesize\ttfamily Q\+Map$<$int, \mbox{\hyperlink{struct_song_list_viewer_window_1_1song__edit}{song\+\_\+edit}}$>$ Song\+List\+Viewer\+Window\+::m\+Song\+Edits\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A map that connects the edits that have occurred to the index of the \mbox{\hyperlink{class_song}{Song}} in the song list. 
+
+
+
+Definition at line 86 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}\label{class_song_list_viewer_window_a02558cb095f356a1288e5663bc2e1955}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!m\+Song\+List@{m\+Song\+List}}
+\index{m\+Song\+List@{m\+Song\+List}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{m\+Song\+List}{mSongList}}
+{\footnotesize\ttfamily Q\+List$<$\mbox{\hyperlink{class_song}{Song}}$\ast$$>$$\ast$ Song\+List\+Viewer\+Window\+::m\+Song\+List = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The list of \mbox{\hyperlink{class_song}{songs}} that are displayed in the viewer. 
+
+
+
+Definition at line 85 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}\label{class_song_list_viewer_window_a1c242af144718150837feff19386dc73}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!m\+Song\+List\+Mode@{m\+Song\+List\+Mode}}
+\index{m\+Song\+List\+Mode@{m\+Song\+List\+Mode}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{m\+Song\+List\+Mode}{mSongListMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}} Song\+List\+Viewer\+Window\+::m\+Song\+List\+Mode = \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927a9847037eeae7688b9cddf8700d425332}{C\+O\+N\+F\+I\+R\+M\+\_\+\+I\+M\+P\+O\+R\+T\+E\+D\+\_\+\+S\+O\+N\+GS}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{mode}} that the song list viewer is in. 
+
+
+
+Definition at line 87 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{class_song_list_viewer_window_a150efbd08beb368c4acc65621d03d35d}\label{class_song_list_viewer_window_a150efbd08beb368c4acc65621d03d35d}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!m\+Unsaved\+Changes@{m\+Unsaved\+Changes}}
+\index{m\+Unsaved\+Changes@{m\+Unsaved\+Changes}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{m\+Unsaved\+Changes}{mUnsavedChanges}}
+{\footnotesize\ttfamily bool Song\+List\+Viewer\+Window\+::m\+Unsaved\+Changes = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Whether or not there are unsaved changes. 
+
+
+
+Definition at line 83 of file songlistviewerwindow.\+h.
+
+\mbox{\Hypertarget{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}\label{class_song_list_viewer_window_ac24fa09133b92a7b4cbd757f9b84258d}} 
+\index{Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}!ui@{ui}}
+\index{ui@{ui}!Song\+List\+Viewer\+Window@{Song\+List\+Viewer\+Window}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Song\+List\+Viewer\+Window$\ast$ Song\+List\+Viewer\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The ui of the window. 
+
+
+
+Definition at line 79 of file songlistviewerwindow.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+U\+I/\mbox{\hyperlink{songlistviewerwindow_8h}{songlistviewerwindow.\+h}}\item 
+U\+I/\mbox{\hyperlink{songlistviewerwindow_8cpp}{songlistviewerwindow.\+cpp}}\end{DoxyCompactItemize}

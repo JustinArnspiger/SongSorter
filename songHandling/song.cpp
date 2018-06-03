@@ -1,94 +1,102 @@
 #include "song.h"
 
-/*!
-  \class Song
-  \ingroup songHandling
-  \inmodule SongSorter
-  \brief Represents a Song.
+/**
+  @class Song
+  @ingroup songHandling
+  @brief Represents a Song.
 
   This class is a container that represents a Song according to its metadata (artist, album, etc.) as well
   as its overall rank and file path.
 */
 
 //-----------------------------------------------
-// Constructors & Destructor
+// Constructors and Destructor
 //-----------------------------------------------
-/*!
- * \fn Song::Song(QString aFilePath, QString aArtistName, QString aAlbumName, QString aSongName)
- * \brief Default constructor for a song
- * \a aFilePath The file path to the song. Defaults to an empty string.
- * \a aArtistName The name of the artist who made the song. Defaults to an empty string.
- * \a aAlbumName The name of the album which the song belongs to. Defaults to an empty string.
- * \a aSongName The name of the song. Defaults to an empty string.
-*/
-Song::Song(QString aFilePath = "", QString aArtistName = "", QString aAlbumName = "", QString aSongName = "") :
-    mRank(UNRANKED), mFilePath(aFilePath), mArtistName(aArtistName), mAlbumName(aAlbumName), mSongName(aSongName)
+
+/**
+ * @brief Constructor for a song
+ * @param aTrackNumber The track number of the song. Defaults to 1.
+ * @param aAlbumName The name of the album which the song belongs to. Defaults to an empty string.
+ * @param aArtistName The name of the artist who made the song. Defaults to an empty string.
+ * @param aFilePath The file path to the song. Defaults to an empty string.
+ * @param aSongName The name of the song. Defaults to an empty string.
+ */
+Song::Song(int aTrackNumber = 1, QString aAlbumName = "", QString aArtistName = "", QString aFilePath = "", QString aSongName = "") :
+    mRank(UNRANKED),
+    mTrackNumber(aTrackNumber),
+    mAlbumName(aAlbumName),
+    mArtistName(aArtistName),
+    mFilePath(aFilePath),
+    mSongName(aSongName)
 {}
 
-/*!
- * \fn Song::~Song()
- * \brief The destructor for a song.
+/**
+ * @brief The destructor for a song.
  */
 Song::~Song()
 {}
 
 //-----------------------------------------------
-// Getters and Setters
+// Public Functions
 //-----------------------------------------------
-/*!
- * \fn QString Song::getAlbumName() const
- * \brief Gets the name of the album that the song belongs to.
- * Returns a string representing the name of the album that the song belongs to.
+
+/**
+ * @brief Gets the name of the album that the song belongs to.
+ * @return A QString representing the name of the album that the song belongs to.
  */
 QString Song::getAlbumName() const
 {
     return mAlbumName;
 }
 
-/*!
- * \fn QString Song::getArtistName() const
- * \brief Gets the name of the artist that wrote the song.
- * Returns a string representing the name of the artist that wrote the song.
+/**
+ * @brief Gets the name of the artist that wrote the song.
+ * @return A QString representing the name of the artist that wrote the song.
  */
 QString Song::getArtistName() const
 {
     return mArtistName;
 }
 
-/*!
- * \fn QString Song::getFilePath() const
- * \brief Gets the path to the song file.
- * Returns a string representing the file path of the song.
+/**
+ * @brief Gets the path to the song file.
+ * @return A QString representing the file path of the song.
  */
 QString Song::getFilePath() const
 {
     return mFilePath;
 }
 
-/*!
- * \fn int Song::getRank() const
- * \brief Gets the ranking of the song.
- * Returns an integer representing the ranking of the song in the sorting.
+/**
+ * @brief Gets the ranking of the song.
+ * @return An integer representing the ranking of the song in the sorting.
  */
 int Song::getRank() const
 {
     return mRank;
 }
 
-/*!
- * \fn QString Song::getSongName() const
- * \brief Gets the name of the song.
- * Returns a string representing the name of song.
+/**
+ * @brief Gets the name of the song.
+ * @return A QString representing the name of song.
  */
 QString Song::getSongName() const
 {
     return mSongName;
 }
 
-/*!
- * \fn void Song::setAlbumName(QString aAlbumName)
- * \brief Sets the name of the album that the song belongs to.
- * \a aAlbumName The new name of the album that the song belongs to.
+/**
+ * @brief Gets the track number of the song.
+ * @return An integer representing the track number of the song.
+ */
+int Song::getTrackNumber() const
+{
+    return mTrackNumber;
+}
+
+/**
+ * @brief Sets the name of the album that the song belongs to.
+ * @param aAlbumName The new name of the album that the song belongs to.
  */
 void Song::setAlbumName(QString aAlbumName)
 {
@@ -135,93 +143,55 @@ void Song::setSongName(QString aSongName)
     mSongName = aSongName;
 }
 
+/**
+ * @brief Sets the track number of the song.
+ * @param aTrackNumber The new track number of the song.
+ */
+void Song::setTrackNumber(int aTrackNumber)
+{
+    mTrackNumber = aTrackNumber;
+}
+
 //-----------------------------------------------
 // Overloaded Operators
 //-----------------------------------------------
-/*!
- * \fn bool Song::operator <(const Song &aOtherSong) const
- * \brief Overloaded operator that compares this song to another song.
- * \a aOtherSong The song to compare to this one.
- *
- * Returns \c true if this song has a lesser rank than aOtherSong.
+
+/**
+ * @brief Less than operator for a Song.
+ * @param aOtherSong The song to compare to this one.
+ * @return True if this Song's rank is less than aOtherSong's rank.
  */
 bool Song::operator <(const Song &aOtherSong) const
 {
     return mRank < aOtherSong.mRank;
 }
 
-/*!
- * \fn bool Song::operator >(const Song &aOtherSong) const
- * \brief Overloaded operator that compares this song to another song.
- * \a aOtherSong The song to compare to this one.
- *
- * Returns \c true if this song has a greater rank than aOtherSong.
+/**
+ * @brief Greater than operator for a Song.
+ * @param aOtherSong The song to compare to this one.
+ * @return True if this Song's rank is greater than aOtherSong's rank.
  */
 bool Song::operator >(const Song &aOtherSong) const
 {
     return mRank > aOtherSong.mRank;
 }
 
-/*!
- * \fn bool Song::operator <=(const Song &aOtherSong) const
- * \brief Overloaded operator that compares this song to another song.
- * \a aOtherSong The song to compare to this one.
- *
- * Returns \c true if this song has a lesser than or equal rank to aOtherSong.
+/**
+ * @brief Less than or equal operator for a Song.
+ * @param aOtherSong The song to compare to this one.
+ * @return True if this Song's rank is less than or equal to aOtherSong's rank.
  */
 bool Song::operator <=(const Song &aOtherSong) const
 {
     return mRank <= aOtherSong.mRank;
 }
 
-/*!
- * \fn bool Song::operator >=(const Song &aOtherSong) const
- * \brief Overloaded operator that compares this song to another song.
- * \a aOtherSong The song to compare to this one.
- *
- * Returns \c true if this song has a greater than or equal rank to aOtherSong.
+/**
+ * @brief Greater than or equal operator for a Song.
+ * @param aOtherSong The song to compare to this one.
+ * @return True if this Song's rank is greater than or equal to aOtherSong's rank.
  */
 bool Song::operator >=(const Song &aOtherSong) const
 {
     return mRank >= aOtherSong.mRank;
-}
-
-//-----------------------------------------------
-// Static Functions
-//-----------------------------------------------
-/*!
- * \fn Song* Song::createSongFromFilePath(QString aFilePath)
- * \brief Returns a new Song whose metadata is retrieved from the file path.
- * \a aFilePath The given file path to the song.
- *
- * This function is for when a song's metadata is unable to be retrieved through the
- * standard method of using QMediaPlayer. In order to try to approximate the metadata,
- * this function will use parts of the file path with the assumption that if the file is
- * something like example_song.mp3, then the song's name is Example Song.
- *
- * The function also tries to obtain the artist and album by assuming (if applicable) that
- * the file path is formatted as .../artistName/albumName/song.<file_extension>.
- *
- * \note This function will allocate a new song, so the song that is created must be deleted later.
- */
-Song* Song::createSongFromFilePath(QString aFilePath)
-{
-    // Initialize default values for the metadata.
-    QString album = "Unknown Album";
-    QString artist = "Unknown Artist";
-
-    // Use the last part of the file path as the song name.
-    QStringList substrings = aFilePath.split('/');
-    QString songName = substrings.at( substrings.count() - 1 );
-    songName.remove(QRegExp(".mp3|.flac"));
-
-    // See if we can make an attempt to get the artist and album from the
-    // file path as well.
-    if( substrings.count() >= 3 )
-    {
-        album = substrings.at( substrings.count() - 2 );
-        artist = substrings.at( substrings.count() - 3 );
-    }
-
-    return new Song(aFilePath, artist, album, songName);
 }

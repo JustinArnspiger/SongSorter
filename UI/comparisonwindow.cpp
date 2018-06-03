@@ -1,11 +1,10 @@
 #include "comparisonwindow.h"
 #include "ui_comparisonwindow.h"
 
-/*!
-  \class ComparisonWindow
-  \brief Contains the UI handling for the comparison window.
-  \ingroup UI
-  \inmodule SongSorter
+/**
+  @class ComparisonWindow
+  @brief Contains the UI handling for the comparison window.
+  @ingroup UI
 
   This class handles the various UI events that can occur on the comparison window.
 */
@@ -13,10 +12,10 @@
 //-----------------------------------------------
 // Constructors and Destructor
 //-----------------------------------------------
-/*!
- * \fn ComparisonWindow::ComparisonWindow(QWidget *parent)
- * \brief The constructor for the comparison window.
- * \a parent The parent widget of the comparison window.
+
+/**
+ * @brief The constructor for the ComparisonWindow.
+ * @param parent The parent widget of the ComparisonWindow.
  */
 ComparisonWindow::ComparisonWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -25,9 +24,8 @@ ComparisonWindow::ComparisonWindow(QWidget *parent) :
     ui->setupUi(this);
 }
 
-/*!
- * \fn ComparisonWindow::~ComparisonWindow()
- * \brief The destructor for the comparison window.
+/**
+ * @brief The destructor for the comparison window.
  */
 ComparisonWindow::~ComparisonWindow()
 {

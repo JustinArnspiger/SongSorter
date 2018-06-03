@@ -1,6 +1,9 @@
 # Song Sorter
 This program is designed to make it easy for people to sort & rank their favorite songs, artists, and albums. It will accomplish this by first getting a list of songs from the user and then presenting to the user a pair of songs and having them choose which one of the two they like more. The program will then continue to present pairs of songs to the user until each song is sorted.
 
+## Built with
+[Taglib 1.11.1](http://taglib.org/)
+
 ## Planned features
 * Efficient Sorting
   * The program will try to reduce the number of comparisons that the user has to make as much as possible. It will attempt to do this by using a self-balancing binary tree to store the results of each comparison.
@@ -23,11 +26,11 @@ This program is designed to make it easy for people to sort & rank their favorit
   * The user will be able to export the results of the sorting to a csv file. This option will be available for both grouped and ungrouped results.
 * Playlist Generation
   * The user will also be able to generate playlists using the results of the sorting.
-
+  
 ## Plan for Implementation
 ### Phase 1: Basic Functionality
 - [ ] Basic GUI Layout
-- [ ] Song Importing
+- [X] Song Importing
 - [ ] Media Player
 - [ ] Song Sorting
 - [ ] Output File Generation

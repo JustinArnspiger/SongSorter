@@ -1,0 +1,36 @@
+/**
+ * @mainpage SongSorter
+ * @section descriptionMainPage Description
+ * This program is designed to make it easy for people to sort & rank their favorite songs,
+ * artists, and albums. It will accomplish this by first getting a list of songs from the user
+ * and then presenting to the user a pair of songs and having them choose which one of the
+ * two they like more. The program will then continue to present pairs of songs to the user
+ * until each song is sorted.
+ *
+ * @link usageGuide Usage Guide @endlink
+ */
+
+/**
+ * @page usageGuide SongSorter Usage Guide
+ * <a href="index.html">\< Back to SongSorter</a>
+ * @tableofcontents
+ * This guide will show you how to use the SongSorter program.
+ *
+ * @section installationUsageGuide Installation.
+ * Not yet implemented.
+ *
+ * @section importingUsageGuide Importing Songs.
+ * Implemented, but guide needs to be written.
+ *
+ * @section editingUsageGuide Editing Songs
+ * Implemented, but guide needs to be written.
+ *
+ * @section removingUsageGuide Removing Songs
+ * Implemented, but guide needs to be written.
+ *
+ * @section Sorting
+ * Not yet implemented.
+ *
+ * @section Exporting
+ * Not yet implemented.
+ */

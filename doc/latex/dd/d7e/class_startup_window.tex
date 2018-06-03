@@ -1,0 +1,544 @@
+\hypertarget{class_startup_window}{}\section{Startup\+Window Class Reference}
+\label{class_startup_window}\index{Startup\+Window@{Startup\+Window}}
+
+
+Contains the UI handling for the startup window.
+
+The startup window is pretty much the main window of the program. It allows for users to import songs, edit imported songs, and begin sorting once songs are imported.  
+
+
+
+
+{\ttfamily \#include $<$startupwindow.\+h$>$}
+
+Inheritance diagram for Startup\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dd/d7e/class_startup_window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_startup_window_a5aac41515d35e1306d8ac0890f3de174}{Startup\+Window}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_startup_window}{Startup\+Window}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_startup_window_a770398264202b2b44cf188c6a7b919fd}{$\sim$\+Startup\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the startup window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_startup_window_a8b611329fddb960c3c27c54f7d5bf060}{on\+\_\+add\+Folder\+Button\+\_\+released}} ()
+\begin{DoxyCompactList}\small\item\em Handles when the Add Folder button is pressed and released. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_startup_window_ad0bffaf12ad4255396ccbd709c85922f}{on\+\_\+begin\+Sorting\+Button\+\_\+released}} ()
+\begin{DoxyCompactList}\small\item\em Handles the Begin Sorting! button being clicked and released. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_startup_window_ac4235050012186e44fbc4e3e3c990d81}{on\+\_\+imported\+Songs\+Confirmed}} ()
+\begin{DoxyCompactList}\small\item\em Slot that handles songs being imported. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_startup_window_a049e5d9f548d809e89f546d29def2707}{on\+\_\+\+Song\+List\+Viewer\+Window\+Cancelled}} ()
+\begin{DoxyCompactList}\small\item\em Slot that handles the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}} being cancelled or exited. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_startup_window_a18e7e279255ae11a1121f880d597dae9}{on\+\_\+song\+List\+Edited}} ()
+\begin{DoxyCompactList}\small\item\em A slot that handles when the song list is edited in the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_startup_window_afb42686ecfc3556f38889ca53b4d458e}{on\+\_\+view\+Song\+List\+Button\+\_\+released}} ()
+\begin{DoxyCompactList}\small\item\em Handles the View Songs button being clicked and released. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_startup_window_adb01cfe36f641352bc2c24a7df6faebd}{parse\+Next\+Song}} ()
+\item 
+void \mbox{\hyperlink{class_startup_window_adc6941b3def8ed33a8925bef6ad82449}{show\+Song\+List\+Viewer\+Window}} (\mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{Song\+List\+Viewer\+Window\+::\+S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}} a\+Song\+List\+Mode)
+\begin{DoxyCompactList}\small\item\em Shows the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_startup_window_a910d56e4b640d6b7b27a6de2ae18d736}{update\+Ui}} ()
+\begin{DoxyCompactList}\small\item\em Updates the the ui based on the state of the main song list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Startup\+Window $\ast$ \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}
+\item 
+\mbox{\hyperlink{class_comparison_window}{Comparison\+Window}} $\ast$ \mbox{\hyperlink{class_startup_window_a674395b4edbe76568be4f0f4c7577ac1}{m\+Comparison\+Window}} = nullptr
+\begin{DoxyCompactList}\small\item\em The window for comparing pairs of songs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}} $\ast$ \mbox{\hyperlink{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}{m\+Song\+List\+Viewer\+Window}} = nullptr
+\begin{DoxyCompactList}\small\item\em The window for viewing lists of songs. \end{DoxyCompactList}\item 
+Q\+List$<$ \mbox{\hyperlink{class_song}{Song}} $\ast$ $>$ \mbox{\hyperlink{class_startup_window_ae57241505d74639131cb0ece2cfc922b}{m\+Songs}}
+\begin{DoxyCompactList}\small\item\em The main song list. \end{DoxyCompactList}\item 
+Q\+List$<$ \mbox{\hyperlink{class_song}{Song}} $\ast$ $>$ \mbox{\hyperlink{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}{m\+Songs\+From\+Selected\+Folder}}
+\begin{DoxyCompactList}\small\item\em A temporary list of songs from an imported folder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const Q\+String \mbox{\hyperlink{class_startup_window_a59337faf9ce34917d0e056414601c571}{m\+Num\+Songs\+Label}} = Q\+String(\char`\"{}Number of songs that will be sorted\+: \char`\"{})
+\begin{DoxyCompactList}\small\item\em A label for the number of songs in the main song list. \end{DoxyCompactList}\item 
+static Q\+String\+List \mbox{\hyperlink{class_startup_window_a7caf611224e692a7116cba45f1aa71a3}{ms\+Supported\+File\+Extensions}} = Q\+String\+List() $<$$<$ \char`\"{}$\ast$.mp3\char`\"{} $<$$<$ \char`\"{}$\ast$.flac\char`\"{}
+\begin{DoxyCompactList}\small\item\em The file extensions that are searched for in a selected folder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the UI handling for the startup window.
+
+The startup window is pretty much the main window of the program. It allows for users to import songs, edit imported songs, and begin sorting once songs are imported. 
+
+Definition at line 21 of file startupwindow.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_startup_window_a5aac41515d35e1306d8ac0890f3de174}\label{class_startup_window_a5aac41515d35e1306d8ac0890f3de174}} 
+\index{Startup\+Window@{Startup\+Window}!Startup\+Window@{Startup\+Window}}
+\index{Startup\+Window@{Startup\+Window}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{Startup\+Window()}{StartupWindow()}}
+{\footnotesize\ttfamily Startup\+Window\+::\+Startup\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the \mbox{\hyperlink{class_startup_window}{Startup\+Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent of the window.\\
+\hline
+\end{DoxyParams}
+The constructor sets up the UI for the \mbox{\hyperlink{class_startup_window}{Startup\+Window}} and connects signals to its slots. 
+
+Definition at line 33 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+33                                             :
+34     QMainWindow(parent),
+35     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}(\textcolor{keyword}{new} Ui::StartupWindow)
+36 \{
+37     \textcolor{comment}{// Set up the UI and other windows.}
+38     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->setupUi(\textcolor{keyword}{this});
+39     \mbox{\hyperlink{class_startup_window_a674395b4edbe76568be4f0f4c7577ac1}{mComparisonWindow}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_comparison_window}{ComparisonWindow}}(\textcolor{keyword}{this});
+40     \mbox{\hyperlink{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}{mSongListViewerWindow}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_song_list_viewer_window}{SongListViewerWindow}}(\textcolor{keyword}{this});
+41     \mbox{\hyperlink{class_startup_window_a674395b4edbe76568be4f0f4c7577ac1}{mComparisonWindow}}->hide();
+42     \mbox{\hyperlink{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}{mSongListViewerWindow}}->hide();
+43     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->viewSongListButton->setEnabled(\textcolor{keyword}{false});
+44     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->beginSortingButton->setEnabled(\textcolor{keyword}{false});
+45 
+46     \textcolor{comment}{// Connect slots.}
+47     connect(\mbox{\hyperlink{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}{mSongListViewerWindow}}, SIGNAL(importedSongsConfirmed()), \textcolor{keyword}{this}, SLOT(
+      \mbox{\hyperlink{class_startup_window_ac4235050012186e44fbc4e3e3c990d81}{on\_importedSongsConfirmed}}()));
+48     connect(\mbox{\hyperlink{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}{mSongListViewerWindow}}, SIGNAL(songListEdited()), \textcolor{keyword}{this}, SLOT(
+      \mbox{\hyperlink{class_startup_window_a18e7e279255ae11a1121f880d597dae9}{on\_songListEdited}}()));
+49     connect(\mbox{\hyperlink{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}{mSongListViewerWindow}}, SIGNAL(importCancelled()), \textcolor{keyword}{this}, SLOT(
+      \mbox{\hyperlink{class_startup_window_a049e5d9f548d809e89f546d29def2707}{on\_SongListViewerWindowCancelled}}()));
+50 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_startup_window_a770398264202b2b44cf188c6a7b919fd}\label{class_startup_window_a770398264202b2b44cf188c6a7b919fd}} 
+\index{Startup\+Window@{Startup\+Window}!````~Startup\+Window@{$\sim$\+Startup\+Window}}
+\index{````~Startup\+Window@{$\sim$\+Startup\+Window}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Startup\+Window()}{~StartupWindow()}}
+{\footnotesize\ttfamily Startup\+Window\+::$\sim$\+Startup\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the startup window. 
+
+
+
+Definition at line 55 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+56 \{
+57     \textcolor{keyword}{delete} \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}};
+58 
+59     \textcolor{comment}{// Delete the songs in the main list.}
+60     \mbox{\hyperlink{class_song}{Song}}* songToDelete = \textcolor{keyword}{nullptr};
+61     QMutableListIterator<Song*> iter(\mbox{\hyperlink{class_startup_window_ae57241505d74639131cb0ece2cfc922b}{mSongs}});
+62     \textcolor{keywordflow}{while}(iter.hasNext())
+63     \{
+64         songToDelete = iter.next();
+65         iter.remove();
+66         \textcolor{keyword}{delete} songToDelete;
+67         songToDelete = \textcolor{keyword}{nullptr};
+68     \}
+69 
+70     \textcolor{comment}{// Delete the songs in the imported song list.}
+71     iter = QMutableListIterator<Song*>(\mbox{\hyperlink{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}{mSongsFromSelectedFolder}});
+72     \textcolor{keywordflow}{while}(iter.hasNext())
+73     \{
+74         songToDelete = iter.next();
+75         iter.remove();
+76         \textcolor{keyword}{delete} songToDelete;
+77         songToDelete = \textcolor{keyword}{nullptr};
+78     \}
+79 
+80 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_startup_window_a8b611329fddb960c3c27c54f7d5bf060}\label{class_startup_window_a8b611329fddb960c3c27c54f7d5bf060}} 
+\index{Startup\+Window@{Startup\+Window}!on\+\_\+add\+Folder\+Button\+\_\+released@{on\+\_\+add\+Folder\+Button\+\_\+released}}
+\index{on\+\_\+add\+Folder\+Button\+\_\+released@{on\+\_\+add\+Folder\+Button\+\_\+released}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+add\+Folder\+Button\+\_\+released}{on\_addFolderButton\_released}}
+{\footnotesize\ttfamily void Startup\+Window\+::on\+\_\+add\+Folder\+Button\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles when the Add Folder button is pressed and released. 
+
+When the Add Folder button is pressed and released, a dialog will show to allow the user to pick a folder of songs that will be added to the list of songs to sort. 
+
+Definition at line 93 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+94 \{
+95     \textcolor{comment}{// Show the open folder dialog and get the chosen directory.}
+96     QFileDialog openFolderDialog;
+97     openFolderDialog.setFileMode(QFileDialog::DirectoryOnly);
+98     QString openedDirectory = openFolderDialog.getExistingDirectory();
+99 
+100     \textcolor{keywordflow}{if}(openedDirectory != \textcolor{stringliteral}{""})
+101     \{
+102         \textcolor{comment}{// If the chosen directory contains songs to import, then get their metadata and create a container
+       for them.}
+103         QDirIterator iter(openedDirectory, \mbox{\hyperlink{class_startup_window_a7caf611224e692a7116cba45f1aa71a3}{msSupportedFileExtensions}}, 
+      QDir::Filter::NoFilter, QDirIterator::FollowSymlinks|QDirIterator::Subdirectories);
+104         \textcolor{keywordflow}{if}(iter.hasNext())
+105         \{
+106             \textcolor{comment}{// Declare variables.}
+107             TagLib::FileRef file;
+108             \textcolor{keywordtype}{int} currentPathLength = 0;
+109             \textcolor{keywordtype}{int} trackNumber = 1;
+110             QString currentPath, artist, album, songName;
+111             \mbox{\hyperlink{class_song}{Song}}* newSong = \textcolor{keyword}{nullptr};
+112             \textcolor{keywordtype}{wchar\_t}* filePathForTaglib = \textcolor{keyword}{nullptr};
+113 
+114             \textcolor{comment}{// Get the metadata of all of the songs in the chosen directory.}
+115             \textcolor{keywordflow}{while}(iter.hasNext())
+116             \{
+117                 \textcolor{comment}{// Convert the QString containing the current path so that we can use it with taglib.}
+118                 currentPath = iter.next();
+119                 currentPathLength = currentPath.length();
+120                 filePathForTaglib = \textcolor{keyword}{new} \textcolor{keywordtype}{wchar\_t}[currentPathLength + 1];
+121                 currentPath.toWCharArray(filePathForTaglib);
+122                 filePathForTaglib[currentPathLength] = L\textcolor{charliteral}{'\(\backslash\)0'};
+123 
+124                 \textcolor{comment}{// Use Taglib to get the metadata of the song.}
+125                 file = TagLib::FileRef(TagLib::FileName(filePathForTaglib));
+126                 \textcolor{keywordflow}{if}(!file.isNull() && file.tag() != \textcolor{keyword}{nullptr})
+127                 \{
+128                     artist = QString(file.tag()->artist().toCString(\textcolor{keyword}{true}));
+129                     album = QString(file.tag()->album().toCString(\textcolor{keyword}{true}));
+130                     songName = QString(file.tag()->title().toCString(\textcolor{keyword}{true}));
+131                     trackNumber = (int)file.tag()->track();
+132                     newSong = \textcolor{keyword}{new} \mbox{\hyperlink{class_song}{Song}}(trackNumber, album, artist, currentPath, songName);
+133 
+134                     \textcolor{comment}{// Add the new song to the list of imported songs.}
+135                     \mbox{\hyperlink{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}{mSongsFromSelectedFolder}}.append(newSong);
+136                 \}
+137 
+138                 \textcolor{comment}{// Clear allocated memory.}
+139                 \textcolor{keyword}{delete} [] filePathForTaglib;
+140                 filePathForTaglib = \textcolor{keyword}{nullptr};
+141             \}
+142         \}
+143     \}
+144 
+145     \textcolor{comment}{// If we found songs in the selected folder, then let the user confirm which ones they want to import.}
+146     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}{mSongsFromSelectedFolder}}.count() > 0)
+147     \{
+148         \mbox{\hyperlink{class_startup_window_adc6941b3def8ed33a8925bef6ad82449}{showSongListViewerWindow}}(
+      SongListViewerWindow::SONG\_LIST\_MODE::CONFIRM\_IMPORTED\_SONGS);
+149     \}
+150 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_startup_window_ad0bffaf12ad4255396ccbd709c85922f}\label{class_startup_window_ad0bffaf12ad4255396ccbd709c85922f}} 
+\index{Startup\+Window@{Startup\+Window}!on\+\_\+begin\+Sorting\+Button\+\_\+released@{on\+\_\+begin\+Sorting\+Button\+\_\+released}}
+\index{on\+\_\+begin\+Sorting\+Button\+\_\+released@{on\+\_\+begin\+Sorting\+Button\+\_\+released}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+begin\+Sorting\+Button\+\_\+released}{on\_beginSortingButton\_released}}
+{\footnotesize\ttfamily void Startup\+Window\+::on\+\_\+begin\+Sorting\+Button\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles the Begin Sorting! button being clicked and released. 
+
+This function will close the \mbox{\hyperlink{class_startup_window}{Startup\+Window}} and open the \mbox{\hyperlink{class_comparison_window}{Comparison\+Window}} to begin sorting the songs. 
+
+Definition at line 158 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+159 \{
+160     \mbox{\hyperlink{class_startup_window_a674395b4edbe76568be4f0f4c7577ac1}{mComparisonWindow}}->show();
+161     hide();
+162 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_startup_window_ac4235050012186e44fbc4e3e3c990d81}\label{class_startup_window_ac4235050012186e44fbc4e3e3c990d81}} 
+\index{Startup\+Window@{Startup\+Window}!on\+\_\+imported\+Songs\+Confirmed@{on\+\_\+imported\+Songs\+Confirmed}}
+\index{on\+\_\+imported\+Songs\+Confirmed@{on\+\_\+imported\+Songs\+Confirmed}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+imported\+Songs\+Confirmed}{on\_importedSongsConfirmed}}
+{\footnotesize\ttfamily void Startup\+Window\+::on\+\_\+imported\+Songs\+Confirmed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot that handles songs being imported. 
+
+This slot will be called when the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}} is accepted and its \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{mode}} is set to C\+O\+N\+F\+I\+R\+M\+\_\+\+I\+M\+P\+O\+R\+T\+E\+D\+\_\+\+S\+O\+N\+GS. 
+
+Definition at line 171 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+172 \{
+173     \textcolor{comment}{// Re-enable the "Add a Folder" button.}
+174     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->addFolderButton->setEnabled(\textcolor{keyword}{true});
+175 
+176     \textcolor{comment}{// Append the imported songs to the main list.}
+177     \mbox{\hyperlink{class_startup_window_ae57241505d74639131cb0ece2cfc922b}{mSongs}}.append(\mbox{\hyperlink{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}{mSongsFromSelectedFolder}});
+178     \mbox{\hyperlink{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}{mSongsFromSelectedFolder}}.clear();
+179 
+180     \textcolor{comment}{// Update the ui.}
+181     show();
+182     \mbox{\hyperlink{class_startup_window_a910d56e4b640d6b7b27a6de2ae18d736}{updateUi}}();
+183 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_startup_window_a18e7e279255ae11a1121f880d597dae9}\label{class_startup_window_a18e7e279255ae11a1121f880d597dae9}} 
+\index{Startup\+Window@{Startup\+Window}!on\+\_\+song\+List\+Edited@{on\+\_\+song\+List\+Edited}}
+\index{on\+\_\+song\+List\+Edited@{on\+\_\+song\+List\+Edited}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+song\+List\+Edited}{on\_songListEdited}}
+{\footnotesize\ttfamily void Startup\+Window\+::on\+\_\+song\+List\+Edited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+A slot that handles when the song list is edited in the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. 
+
+This function checks if there are still songs in the \mbox{\hyperlink{class_startup_window_ae57241505d74639131cb0ece2cfc922b}{main song list}} and updates the UI accordingly. 
+
+Definition at line 191 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+192 \{
+193     show();
+194     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->addFolderButton->setEnabled(\textcolor{keyword}{true});
+195     \mbox{\hyperlink{class_startup_window_a910d56e4b640d6b7b27a6de2ae18d736}{updateUi}}();
+196 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_startup_window_a049e5d9f548d809e89f546d29def2707}\label{class_startup_window_a049e5d9f548d809e89f546d29def2707}} 
+\index{Startup\+Window@{Startup\+Window}!on\+\_\+\+Song\+List\+Viewer\+Window\+Cancelled@{on\+\_\+\+Song\+List\+Viewer\+Window\+Cancelled}}
+\index{on\+\_\+\+Song\+List\+Viewer\+Window\+Cancelled@{on\+\_\+\+Song\+List\+Viewer\+Window\+Cancelled}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+\+Song\+List\+Viewer\+Window\+Cancelled}{on\_SongListViewerWindowCancelled}}
+{\footnotesize\ttfamily void Startup\+Window\+::on\+\_\+\+Song\+List\+Viewer\+Window\+Cancelled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot that handles the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}} being cancelled or exited. 
+
+This function just resets the import process and updates the ui. 
+
+Definition at line 203 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+204 \{
+205     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->addFolderButton->setEnabled(\textcolor{keyword}{true});
+206     \mbox{\hyperlink{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}{mSongsFromSelectedFolder}}.clear();
+207     show();
+208     \mbox{\hyperlink{class_startup_window_a910d56e4b640d6b7b27a6de2ae18d736}{updateUi}}();
+209 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_startup_window_afb42686ecfc3556f38889ca53b4d458e}\label{class_startup_window_afb42686ecfc3556f38889ca53b4d458e}} 
+\index{Startup\+Window@{Startup\+Window}!on\+\_\+view\+Song\+List\+Button\+\_\+released@{on\+\_\+view\+Song\+List\+Button\+\_\+released}}
+\index{on\+\_\+view\+Song\+List\+Button\+\_\+released@{on\+\_\+view\+Song\+List\+Button\+\_\+released}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{on\+\_\+view\+Song\+List\+Button\+\_\+released}{on\_viewSongListButton\_released}}
+{\footnotesize\ttfamily void Startup\+Window\+::on\+\_\+view\+Song\+List\+Button\+\_\+released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Handles the View Songs button being clicked and released. 
+
+This function will show the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}} and populate it with \mbox{\hyperlink{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}{the current imported songs}}. 
+
+Definition at line 217 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+218 \{
+219     \mbox{\hyperlink{class_startup_window_adc6941b3def8ed33a8925bef6ad82449}{showSongListViewerWindow}}(
+      SongListViewerWindow::SONG\_LIST\_MODE::EDIT\_MAIN\_SONG\_LIST);
+220 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_startup_window_adb01cfe36f641352bc2c24a7df6faebd}\label{class_startup_window_adb01cfe36f641352bc2c24a7df6faebd}} 
+\index{Startup\+Window@{Startup\+Window}!parse\+Next\+Song@{parse\+Next\+Song}}
+\index{parse\+Next\+Song@{parse\+Next\+Song}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{parse\+Next\+Song()}{parseNextSong()}}
+{\footnotesize\ttfamily void Startup\+Window\+::parse\+Next\+Song (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_startup_window_adc6941b3def8ed33a8925bef6ad82449}\label{class_startup_window_adc6941b3def8ed33a8925bef6ad82449}} 
+\index{Startup\+Window@{Startup\+Window}!show\+Song\+List\+Viewer\+Window@{show\+Song\+List\+Viewer\+Window}}
+\index{show\+Song\+List\+Viewer\+Window@{show\+Song\+List\+Viewer\+Window}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{show\+Song\+List\+Viewer\+Window()}{showSongListViewerWindow()}}
+{\footnotesize\ttfamily void Startup\+Window\+::show\+Song\+List\+Viewer\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{Song\+List\+Viewer\+Window\+::\+S\+O\+N\+G\+\_\+\+L\+I\+S\+T\+\_\+\+M\+O\+DE}}}]{a\+Song\+List\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Shows the \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Song\+List\+Mode} & The \mbox{\hyperlink{class_song_list_viewer_window_a6f23a68c416173f6b571a2cc4990a927}{mode}} in which to run the song list viewer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 230 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+231 \{
+232     \textcolor{comment}{// Update the ui since we're showing the dialog.}
+233     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->addFolderButton->setEnabled(\textcolor{keyword}{false});
+234 
+235     \textcolor{comment}{// Setup the window and show it.}
+236     \textcolor{keywordflow}{if}(aSongListMode == SongListViewerWindow::SONG\_LIST\_MODE::CONFIRM\_IMPORTED\_SONGS)
+237     \{
+238         \mbox{\hyperlink{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}{mSongListViewerWindow}}->\mbox{\hyperlink{class_song_list_viewer_window_ae26127c85ed57885461c5143be4ae1e9}{setupSongListViewerWindow}}(
+      aSongListMode, &\mbox{\hyperlink{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}{mSongsFromSelectedFolder}});
+239     \}
+240     \textcolor{keywordflow}{else}
+241     \{
+242         \mbox{\hyperlink{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}{mSongListViewerWindow}}->\mbox{\hyperlink{class_song_list_viewer_window_ae26127c85ed57885461c5143be4ae1e9}{setupSongListViewerWindow}}(
+      aSongListMode, &\mbox{\hyperlink{class_startup_window_ae57241505d74639131cb0ece2cfc922b}{mSongs}});
+243     \}
+244     \mbox{\hyperlink{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}{mSongListViewerWindow}}->show();
+245     hide();
+246 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_startup_window_a910d56e4b640d6b7b27a6de2ae18d736}\label{class_startup_window_a910d56e4b640d6b7b27a6de2ae18d736}} 
+\index{Startup\+Window@{Startup\+Window}!update\+Ui@{update\+Ui}}
+\index{update\+Ui@{update\+Ui}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{update\+Ui()}{updateUi()}}
+{\footnotesize\ttfamily void Startup\+Window\+::update\+Ui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the the ui based on the state of the main song list. 
+
+
+
+Definition at line 251 of file startupwindow.\+cpp.
+
+
+\begin{DoxyCode}
+252 \{
+253     \textcolor{keywordtype}{bool} enableViewAndSortButtons = !\mbox{\hyperlink{class_startup_window_ae57241505d74639131cb0ece2cfc922b}{mSongs}}.empty();
+254     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->beginSortingButton->setEnabled(enableViewAndSortButtons);
+255     \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->viewSongListButton->setEnabled(enableViewAndSortButtons);
+256     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_startup_window_ae57241505d74639131cb0ece2cfc922b}{mSongs}}.count() > 0)
+257     \{
+258         \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->numSongsLabel->show();
+259         \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->numSongsLabel->setText(\mbox{\hyperlink{class_startup_window_a59337faf9ce34917d0e056414601c571}{StartupWindow::mNumSongsLabel}} + QString(\textcolor{stringliteral}{"
+      %1"}).arg(\mbox{\hyperlink{class_startup_window_ae57241505d74639131cb0ece2cfc922b}{mSongs}}.count()));
+260     \}
+261     \textcolor{keywordflow}{else}
+262     \{
+263         \mbox{\hyperlink{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}{ui}}->numSongsLabel->hide();
+264     \}
+265 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_startup_window_a674395b4edbe76568be4f0f4c7577ac1}\label{class_startup_window_a674395b4edbe76568be4f0f4c7577ac1}} 
+\index{Startup\+Window@{Startup\+Window}!m\+Comparison\+Window@{m\+Comparison\+Window}}
+\index{m\+Comparison\+Window@{m\+Comparison\+Window}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{m\+Comparison\+Window}{mComparisonWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_comparison_window}{Comparison\+Window}}$\ast$ Startup\+Window\+::m\+Comparison\+Window = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The window for comparing pairs of songs. 
+
+
+
+Definition at line 44 of file startupwindow.\+h.
+
+\mbox{\Hypertarget{class_startup_window_a59337faf9ce34917d0e056414601c571}\label{class_startup_window_a59337faf9ce34917d0e056414601c571}} 
+\index{Startup\+Window@{Startup\+Window}!m\+Num\+Songs\+Label@{m\+Num\+Songs\+Label}}
+\index{m\+Num\+Songs\+Label@{m\+Num\+Songs\+Label}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{m\+Num\+Songs\+Label}{mNumSongsLabel}}
+{\footnotesize\ttfamily const Q\+String Startup\+Window\+::m\+Num\+Songs\+Label = Q\+String(\char`\"{}Number of songs that will be sorted\+: \char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+A label for the number of songs in the main song list. 
+
+
+
+Definition at line 49 of file startupwindow.\+h.
+
+\mbox{\Hypertarget{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}\label{class_startup_window_a26e72433e3cf3d35ae49d77d91f5cc38}} 
+\index{Startup\+Window@{Startup\+Window}!m\+Song\+List\+Viewer\+Window@{m\+Song\+List\+Viewer\+Window}}
+\index{m\+Song\+List\+Viewer\+Window@{m\+Song\+List\+Viewer\+Window}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{m\+Song\+List\+Viewer\+Window}{mSongListViewerWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_song_list_viewer_window}{Song\+List\+Viewer\+Window}}$\ast$ Startup\+Window\+::m\+Song\+List\+Viewer\+Window = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The window for viewing lists of songs. 
+
+
+
+Definition at line 45 of file startupwindow.\+h.
+
+\mbox{\Hypertarget{class_startup_window_ae57241505d74639131cb0ece2cfc922b}\label{class_startup_window_ae57241505d74639131cb0ece2cfc922b}} 
+\index{Startup\+Window@{Startup\+Window}!m\+Songs@{m\+Songs}}
+\index{m\+Songs@{m\+Songs}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{m\+Songs}{mSongs}}
+{\footnotesize\ttfamily Q\+List$<$\mbox{\hyperlink{class_song}{Song}}$\ast$$>$ Startup\+Window\+::m\+Songs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The main song list. 
+
+
+
+Definition at line 46 of file startupwindow.\+h.
+
+\mbox{\Hypertarget{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}\label{class_startup_window_af419f4809f6fae0b370f1d9112dae9b4}} 
+\index{Startup\+Window@{Startup\+Window}!m\+Songs\+From\+Selected\+Folder@{m\+Songs\+From\+Selected\+Folder}}
+\index{m\+Songs\+From\+Selected\+Folder@{m\+Songs\+From\+Selected\+Folder}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{m\+Songs\+From\+Selected\+Folder}{mSongsFromSelectedFolder}}
+{\footnotesize\ttfamily Q\+List$<$\mbox{\hyperlink{class_song}{Song}}$\ast$$>$ Startup\+Window\+::m\+Songs\+From\+Selected\+Folder\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A temporary list of songs from an imported folder. 
+
+
+
+Definition at line 47 of file startupwindow.\+h.
+
+\mbox{\Hypertarget{class_startup_window_a7caf611224e692a7116cba45f1aa71a3}\label{class_startup_window_a7caf611224e692a7116cba45f1aa71a3}} 
+\index{Startup\+Window@{Startup\+Window}!ms\+Supported\+File\+Extensions@{ms\+Supported\+File\+Extensions}}
+\index{ms\+Supported\+File\+Extensions@{ms\+Supported\+File\+Extensions}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{ms\+Supported\+File\+Extensions}{msSupportedFileExtensions}}
+{\footnotesize\ttfamily Q\+String\+List Startup\+Window\+::ms\+Supported\+File\+Extensions = Q\+String\+List() $<$$<$ \char`\"{}$\ast$.mp3\char`\"{} $<$$<$ \char`\"{}$\ast$.flac\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The file extensions that are searched for in a selected folder. 
+
+
+
+Definition at line 50 of file startupwindow.\+h.
+
+\mbox{\Hypertarget{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}\label{class_startup_window_a5afeeaabe9a34a02a67d2e7d9f36dc09}} 
+\index{Startup\+Window@{Startup\+Window}!ui@{ui}}
+\index{ui@{ui}!Startup\+Window@{Startup\+Window}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Startup\+Window$\ast$ Startup\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 42 of file startupwindow.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+U\+I/\mbox{\hyperlink{startupwindow_8h}{startupwindow.\+h}}\item 
+U\+I/\mbox{\hyperlink{startupwindow_8cpp}{startupwindow.\+cpp}}\end{DoxyCompactItemize}
